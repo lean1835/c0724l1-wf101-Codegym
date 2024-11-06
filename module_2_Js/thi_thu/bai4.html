@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        class MayTinh{
+            constructor(MaMay,TenMay,HangSanXuat,GiaBan){
+                this.MaMay=MaMay;
+                this.TenMay=TenMay;
+                this.HangSanXuat=HangSanXuat;
+                this.GiaBan=GiaBan;
+            }
+            
+            getMaMay() {
+                return MaMay;
+            }
+            getTenMay() {
+                return TenMay;
+            }
+            getHangSanXuat() {
+                return HangSanXuat;
+            }
+            getGiaBan() {
+                return GiaBan;
+            }
+            setMaMay(MaMay) {
+                this.MaMay = MaMay;
+            }
+            setTenMay(TenMay) {
+                this.TenMay = TenMay;
+            }
+            setHangSanXuat(HangSanXuat) {
+                this.HangSanXuat = HangSanXuat;
+            }
+            setGiaBan(GiaBan) {
+                this.GiaBan = GiaBan;
+            }
+            toString(MaMay,TenMay,HangSanXuat,GiaBan) {
+		        return "maytinh [MaMay=" + MaMay + ", TenMay=" + TenMay + ", HangSanXuat=" + HangSanXuat + ", GiaBan=" + GiaBan
+				    + "]";
+	        }
+        }
+        //chuong trinh quan ly may tinh
+        let n;
+        do{
+            n=+prompt("Nhap so may tinh: ");
+        }while(n<0||n>50);
+        let dsMT=[];
+        let list=[];
+        let MaMay;
+        let TenMay;
+        let HangSanXuat;
+        let GiaBan;   
+        //Nhap may tinh
+        for(let i=0;i<n;i++){
+            alert("Nhap may tinh thu: "+(i+1));
+            MaMay=prompt("Nhap ma may: ");
+            TenMay=prompt("Nhap ten may: ");
+            HangSanXuat=prompt("Nhap hang san xuat: ");
+            GiaBan=+prompt("Nhap gia ban: ");
+            dsMT[i]= new MayTinh(MaMay,TenMay,HangSanXuat,GiaBan);
+            //list sẽ thành một mảng chứa các chuỗi
+            list.push(dsMT[i].toString(MaMay,TenMay,HangSanXuat,GiaBan));
+            console.log(dsMT[i].toString(MaMay,TenMay,HangSanXuat,GiaBan))
+        }
+        document.getElementById("result").innerHTML="Danh sách máy tính là: ";
+       // hien thi ra danh sach khong duoc sap xep
+        for(let i=0;i<list.length;i++){
+           document.write(list[i]+"<br>");
+        }
+    </script>
+</body>
+</html>

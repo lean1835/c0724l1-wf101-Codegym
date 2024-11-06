@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class ElectricLamp{
+            constructor(status){
+                this.status=status;
+            }
+            turnOff(){
+                return this.status=false;
+            }
+            turnOff(){
+                return this.status=true;
+            }
+            getStatus(){
+                return this.status;
+            }
+        }
+        class SwitchButton{
+            constructor(lamp,status){
+                //lamp là bóng đèn(1 class)-> tức là truyền bóng đèn vào qua biến lamp và thay đổi giá trị của lamp.status sẽ tương đương với bongDen1.status=true/false
+                this.lamp=lamp;
+                this.status=status;
+            }
+            connectToLamp(ElectricLamp){
+                this.lamp=ElectricLamp;
+
+            }
+            switchOff(){
+                this.lamp.status=false;
+                return this.status=false;
+            }
+            switchOn(){
+                this.lamp.status=true;  // .lamp.status để truy xuất tới đèn nhận giá trị 
+                return this.status=true;
+            }
+        }
+        let bongDen1=new ElectricLamp(false);
+        //truyền class bongden vào nút
+        let nut1 =new SwitchButton(bongDen1,false);
+        console.log(nut1.switchOn());
+        console.log(bongDen1.getStatus());
+        console.log(nut1.switchOff());
+        console.log(bongDen1.getStatus());
+    </script>
+</body>
+</html>

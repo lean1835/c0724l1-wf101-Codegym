@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.-->
+<!--Chương trình kiểm tra xem V có thuộc mảng đã cho không,-->
+<!--nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,-->
+<!--và gán 0 cho phần tử cuối cùng của mảng)-->
+<script>
+    // thi 10 điểm
+    // nhập từ phím một mảng gồm n phân tử ( n<20)
+    // [1,2,3,3,3,3] => v = 3 => [1,2,3,3,3,0]
+    // let n;
+    // do {
+    //    n = +prompt("nhập vào độ dài của mảng ");// chuỗi cũng phải nhập lại,
+    // }while (n<=0||n>20)
+    // nhập phần tử 5
+    // let array = [];
+    // for (let i = 0; i <n ; i++) {
+    //     let element = + prompt("nhập phần tử thứ: "+ i);
+    //     array.push(element)
+    // }
+
+    // let array = new Array(n);
+    // for (let i = 0; i <array.length ; i++) {
+    //     let element = + prompt("nhập phần tử thứ: "+ i);
+    //     array[i]= element;
+    // }
+    //
+    // alert("Mảng vừa nhập là : "+ array);
+    // let v = +prompt("nhập số v");
+    // for (let i = 0; i <array.length ; i++) {
+    //     if (v==array[i]){
+    //         // dịch chuyển mảng tại vị trí i, duyet tới vị trí áp chót
+    //         for (let j = i; j <array.length-1 ; j++) {
+    //             array[j] = array[j+1];
+    //         }
+    //         i--;
+    //         // gán giá trị cuối bằng 0;
+    //         array[array.length-1]=0;
+    //     }
+    // }
+    // alert(array);
+    //
+    // let arr1 =[1,2,3];
+    // let arr2 =[11,22,33];
+    // let arr =[];
+    // for (let i = 0; i <arr1.length ; i++) {
+    //     arr.push(arr1[i]);
+    // }
+    // for (let i = 0; i <arr2.length ; i++) {
+    //     arr.push(arr2[i]);
+    // }
+    // alert(arr);
+
+    // mảng 2 chiều là một mảng chiều mà bên trong mỗi phần tử lại là một mảng 1 chiều
+
+    let arr = [
+        [2,3,4],
+        [5,6,7],
+    ]
+
+    // sử dùng fori lồng nhau duyệt mảng 2 chiều
+    // for (let i = 0; i <arr.length ; i++) {
+    //     // arr[i] // mảng 1 chiều nữa
+    //     for (let j = 0; j <arr[i].length ; j++) {
+    //         document.write(arr[i][j]);
+    //     }
+    //     document.write("<br>")
+    // }
+    // khởi toạ mảng 5x4
+    let array = new Array(5);
+    for (let i = 0; i <array.length ; i++) {
+        array[i] = new Array(4);
+    }
+
+
+
+
+</script>
+</body>
+</html>

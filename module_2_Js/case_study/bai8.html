@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n;
+        do{
+            n=+prompt("nhap so ptu cua mang: ");
+        }while(n<=0||n>20);
+        let arr=[];
+        for(let i=0;i<n;i++){
+            let item=prompt("nhap ptu thu "+i);
+            arr.push(item);
+        }
+        function checkNguyenTo(x){
+            for(let i=2;i<=Math.sqrt(x);i++){
+                if(x%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        // kiem tra mảng nguyyen to
+        function checkMang(arr){
+            for(let i=0;i<arr.length;i++){
+                if(!checkNguyenTo(arr[i])){
+                    return false;
+                }
+            }
+            return true;
+        }
+        alert(checkMang(arr));
+    </script>
+</body>
+</html>

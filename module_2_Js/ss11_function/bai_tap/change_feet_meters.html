@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kết quả là: </h1>
+    <script>
+        let feet=+prompt("Nhập số feet cần đổi sang meter: ");
+        let meter=+prompt("Nhập số meter cần đổi sang feet: ");
+        feetToMeter(feet);
+        meterToFeet(meter);
+        function feetToMeter(feet){
+            let meter = 0.305 * feet;
+            document.write(feet+" feet"+" = "+meter+" meter"+"<br>");
+        }
+        function meterToFeet(meter){
+            let feet = 3.279 * meter;
+            document.write(meter+" meter"+" = "+feet+" feet"+"<br>");
+        }
+    </script>
+</body>
+</html>

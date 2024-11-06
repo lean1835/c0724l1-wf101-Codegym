@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Quản lý khách hàng</title>
+    <style>
+        .manager-customer {
+            margin: 10px 5px;
+        }
+        button{
+            width: 200px;
+        }
+        table{
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="manager-customer">
+        <div class="button">
+            <button onclick="themKhachHang()" class="btn btn-primary">Thêm mới khách hàng</button>
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Mã khách hàng</td>
+                        <td>Tên khách hàng</td>
+                        <td>Số điện thoại khách hàng</td>
+                        <td>Email</td>
+                        <td>Địa chỉ</td>
+                    </tr>
+                </thead>
+               <tbody id="thongTinKhachHang">
+        
+               </tbody>
+            </table>    
+        </div>
+    </div>
+ <script>
+    class Info {
+        constructor(id, name, phone, mail, address){
+            this.id = id;
+            this.name = name;
+            this.phone = phone;
+            this.mail = mail;
+            this.address = address;
+        }
+    }
+    let thongTinKhachHang = [];
+    let customerTable = '';
+    function hienThi(){
+        customerTable='';
+        for (let i=0; i<thongTinKhachHang.length; i++){
+            customerTable += `
+                            <tr>
+                                <td>${thongTinKhachHang[i].id}</td>
+                                <td>${thongTinKhachHang[i].name}</td>
+                                <td>${thongTinKhachHang[i].phone}</td>
+                                <td>${thongTinKhachHang[i].mail}</td>
+                                <td>${thongTinKhachHang[i].address}</td>
+                            </tr>
+                            `;
+        }
+        document.getElementById('thongTinKhachHang').innerHTML = customerTable;
+    }
+    function themKhachHang(){
+        let checkRegexId = /^KH-\d{4}$/;
+        let checkRegexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,6}$/;
+        let id;
+        let mail;
+        do {
+            id = prompt('Nhập mã khách hàng');
+        }while (!checkRegexId.test(id));
+        let name = prompt('Nhập tên của khách hàng');
+        let phone = prompt('Nhập số điện thoại của khách hàng');
+        do {
+            mail = prompt('Nhập mail của khách hàng');
+        }while (!checkRegexMail.test(mail));
+        let address = prompt('Nhập địa chỉ của khách hàng');
+        let newCustomer = new Info (id, name, phone, mail, address);
+        thongTinKhachHang.push(newCustomer);
+        hienThi();
+    }
+ </script>   
+</body>
+</html>

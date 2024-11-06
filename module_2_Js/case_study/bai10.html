@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str=prompt("nhap chuoi: ");
+        let result=[];
+        
+        //check ptu da ton tai
+        function checkLap(result,x){
+            for(let i=0;i<result.length;i++){
+                if(result[i]==x)
+                    return false;
+            }
+            return true;
+        }
+        function checkString(str,result){
+            let nguyenAm=['u','e','o','a','i'];
+            //quy ve chu in thuong
+            let strLower=str.toLowerCase();
+            for(let i=0;i<strLower.length;i++){
+                for(let j=0;j<nguyenAm.length;j++){
+                    if(strLower[i]==nguyenAm[j]&&checkLap(result,nguyenAm[j])){
+                        result.push(strLower[i]);
+                    }
+                }
+                //cach 2
+                // if(nguyenAm.includes(strLower[i])&&result.includes(strLower[i])==false){
+                //     result.push(strLower[i]);
+                // }
+            }
+        }
+        checkString(str,result);
+        alert(result);
+    </script>
+</body>
+</html>

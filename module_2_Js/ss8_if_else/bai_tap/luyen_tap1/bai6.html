@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhap luong nhan vien(triệu)" id="soTien">
+    <button onclick="check()">Kết quả</button>
+    <h1 id="result"></h1>
+    <script>
+        function check(){
+            let soTien=+document.getElementById("soTien").value;
+            alert(soTien)
+            if (soTien<=100){
+                let hoaHong=soTien*0.05;
+                document.getElementById("result").innerText="so hoa hong nhan duoc la " +hoaHong+" trieu";
+            }else if (soTien <= 300){
+                let hoaHong=soTien*0.1;
+                document.getElementById("result").innerText="so hoa hong nhan duoc la "+hoaHong+" trieu";
+            }else{
+                let hoaHong=soTien*0.2;
+                document.getElementById("result").innerText="so hoa hong nhan duoc la "+hoaHong+" trieu";
+            }               
+        }      
+    </script>
+</body>
+</html>

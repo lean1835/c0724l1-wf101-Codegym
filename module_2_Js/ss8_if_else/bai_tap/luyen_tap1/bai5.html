@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="diemKT">
+    <input type="text" id="diemGK">
+    <input type="text" id="diemCK">
+    <button onclick="check()">Kết quả</button>
+    <h1 id="result"></h1>
+    <script>
+        function check(){
+            let diemKT=+document.getElementById("diemKT").value;
+            let diemGK=+document.getElementById("diemGK").value;
+            let diemCK=+document.getElementById("diemCK").value;
+            let diemTBM= (diemKT*1 +diemGK*2+diemCK*3)/6 ;
+            alert("diemtbm ="+diemTBM);
+            if (diemTBM < 6.5){
+                document.write("hoc luc trung binh");
+            }else if (diemTBM < 8.0){
+                document.write("hoc luc kha");
+            }else if (diemTBM <= 10.0){
+                document.write("hoc luc gioi");
+            }else{
+                document.write("khong hop le");
+            } 
+        }
+    </script>
+</body>
+</html>

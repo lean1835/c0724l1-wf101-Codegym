@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let arr= [1,5,6,13,9,12,8,0,5,1];
+        alert(`[${fibonaci(arr)}]`)
+        ///dkien so n la fibonaccii : 5n^2+4 và 5n^2-4 là số chính phương
+        function checkFibonaci(x){
+            let n1=5*x*x-4;
+            let n2=5*x*x+4;
+            if(Math.sqrt(n1)==parseInt(Math.sqrt(n1))||Math.sqrt(n2)==parseInt(Math.sqrt(n2))){
+                return true;
+            }return false;
+        }
+        function fibonaci(arr){
+            let arrFibo=[];
+            //nhap mang fibo
+            for(let i=0;i<arr.length;i++){
+                if(checkFibonaci(arr[i])){
+                    arrFibo.push(arr[i]);
+                }
+            }
+            //sap xep mang fibo
+            for(let i=0;i<arrFibo.length-1;i++){
+                for(let j=i+1;j<arrFibo.length;j++){
+                    if(arrFibo[i]>arrFibo[j]){
+                        let temp=arrFibo[i];
+                        arrFibo[i]=arrFibo[j];
+                        arrFibo[j]=temp;
+                    }
+                }
+            }
+            return arrFibo;
+        }
+    </Script>
+</body>
+</html>

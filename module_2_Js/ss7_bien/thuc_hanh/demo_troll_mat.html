@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="button" onmousemove="changeCurrency()">Đố anh bắt được em button</button>
+
+    <script>
+            const changeCurrency = ()=>{
+                const a= Math.random()*500;  // ngẫu nhiên từ 1 đến 100 (số)
+                const b =Math.random()*500; 
+                console.log(a);
+                document.getElementById("button").style= `transform: translate(${a}px, ${b}px)`; // truyền vào tran theo tọa độ xy và dấu `` để truy xuất phân thử đối tượng
+            }
+    </script>
+       
+</body>
+</html>

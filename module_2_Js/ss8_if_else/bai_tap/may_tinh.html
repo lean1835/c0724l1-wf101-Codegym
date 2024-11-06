@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="window"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="1"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="2"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="3"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="+"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="4"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="5"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="6"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="7"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="8"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="9"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="x"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="xoaTatCa()" value="C"></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="0"></td>
+            <td><input type="button" onclick="tinhToan()" value="="></td>
+            <td><input type="button" onclick="nhapKyTu(this.value)" value="/"></td>
+        </tr>
+    </table>
+    <script>
+        function nhapKyTu(kyTu){
+            if(kyTu==="x"){
+                document.getElementById("window").value+="*"
+            }else{
+                document.getElementById("window").value+=kyTu;
+            }
+        }
+        function tinhToan(){
+            let string=document.getElementById("window").value;
+            let ketQua= eval(string);
+            document.getElementById("window").value=ketQua;
+        }
+        function xoaTatCa(){
+            document.getElementById("window").value="";
+        }
+    </script>
+</body>
+</html>

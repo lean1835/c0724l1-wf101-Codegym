@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let check =true;
+        let str1=prompt("nhap chuoi 1");
+        let str2=prompt("nhap chuoi 2");
+        //-----------------
+        //cách 1: sử dụng hàm
+        // function kiemTraChuoiBangNhau(str1,str2){
+        //     return str1===str2;
+        // }
+        // if(kiemTraChuoiBangNhau(str1,str2)){
+        //     alert("2 chuoi bang nhau");
+        // }else{
+        //     alert("2 chuoi khong bang nhau");
+        // }
+        //-------------------
+        if(str1.length==str2.length){
+            for(let i=0;i<str1.length;i++){
+                if(str1[i]!==str2[i]){
+                    check=false
+                    break;
+                }
+            }
+            if(check==true){
+                alert("2 chuoi bang nhau");
+            }else{
+                alert("2 chuoi khong bang nhau");
+        }
+        }else{
+            alert("2 chuoi khong bang nhau");
+        }
+
+    </script>
+</body>
+</html>

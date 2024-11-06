@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrS=[ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+        let arrCS= ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+        let word=prompt("nhap chom sao");
+        let check=false;
+        let index;
+        function doiSangChomSao(word){
+            for(let i=0;i<arrS.length;i++){
+                if(arrS[i]==word){
+                    index=i;
+                    check=true;
+                    break;
+                }
+            }
+        }
+        doiSangChomSao(word);
+        if(check==true){
+            alert(arrCS[index])
+        }else{
+            document.write("khong tim thay");
+        }
+
+    </script>
+</body>
+</html>

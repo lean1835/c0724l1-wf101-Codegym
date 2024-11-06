@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n;
+        do{
+            n=+prompt("Nhập số phần tử của mảng(n<=50): ");
+        }while(n<=0||n>50);
+        //thêm mảng
+        let arr=[];
+        for(let i=0;i<n;i++){
+            let item=+prompt("Nhập phần tử thứ: "+i);
+            arr.push(item);
+        }
+        //nhập k
+        let k;
+        do{
+            k=+prompt("Nhập k(k>0): ");
+        }while(k<=0);
+        //đếm cặp số nguyên có tổng chia hết cho k:
+        let count=0;
+        for(let i=0;i<arr.length-1;i++){
+            for(let j=i+1;j<arr.length;j++){
+                if((arr[i]+arr[j])%k==0){
+                    //kiem tra xem la cap nao
+                    console.log(`(${arr[i]},${arr[j]})`);
+                    count++;
+                }
+            }
+        }
+        alert(`Số lượng cặp số thỏa mãn yêu cầu là ${count}`);
+    </script>
+</body>
+</html>

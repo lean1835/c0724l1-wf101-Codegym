@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="n1" value="0">
+<input id="n2" value="0"><br>
+<button onclick="tinhToan('+')">+</button>
+<button onclick="tinhToan('-')">-</button>
+<button onclick="tinhToan('*')">*</button>
+<button onclick="tinhToan('/')">/</button><br>
+<h3 id="result"></h3>
+
+<script>
+
+
+
+    function tinhToan(toanTu) {
+        let num1= +document.getElementById("n1").value;
+        let num2= +document.getElementById("n2").value;
+        let result = eval(num1 +toanTu+ num2);
+        // + tenBien truyen vao + thì mới hiệu lực cho tham số => + - * / như kiểu trong câu lệnh in của java
+
+        // hàm eval bọc cụm tính toán đằng sau là ép kiểu theo toán học => có thể từ chuỗi thành +-x:
+
+        // document.getElementById("result").innerText = "Kết quả là : "+result;
+        document.getElementById("result").innerText = `Kết quả là : ${result}`; // cú pháp mới của ES6 (2015)
+    }
+    let result =0;zzz
+    let num1= document.getElementById("n1");
+    let num2= document.getElementById("n2");
+    function add() {
+        let n1= +num1.value; //hoac truc tiep let num1=document.getElementById("n1").value;
+        let n2= +num2.value;
+        result = n1- n2;
+      document.getElementById("result").innerText = "Kết quả là : "+result;
+    }
+    function sub() {
+        let n1= +num1.value;
+        let n2= +num2.value;
+        result = n1- n2;
+        document.getElementById("result").innerText = result;
+    }
+    function mul() {
+        let n1= +num1.value;
+        let n2= +num2.value;
+        result = n1*n2;
+        document.getElementById("result").innerText = result;
+    }
+    function div() {
+        let n1= +num1.value;
+        let n2= +num2.value;
+        result = n1/ n2;
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</body>
+</html>

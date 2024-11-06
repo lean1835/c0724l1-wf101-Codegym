@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=+prompt("Nhap so ptu cua mang: ");
+        let arr= new Array(n);
+        let x;
+        for(let i=0;i<n;i++){
+            x=+prompt("nhap phan tu thu "+i);
+            arr.push(x);
+        }
+        
+        alert("mang la: "+arr.join(' '));
+        let daoMang=arr.reverse();
+        alert("mang dao nguoc la: "+daoMang.join(' '));
+    </script>
+</body>
+</html>

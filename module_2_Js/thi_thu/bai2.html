@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str=prompt("Nhap chuoi ki tu: ");
+        alert(`[${countChar(str)}]`);
+        countChar(str)
+        function countChar(str){
+            let countUpper=0;
+            let countLower=0;
+            for(let i=0;i<str.length;i++){
+                if(str[i]>='a'&&str[i]<='z'){
+                    countLower++;
+                }
+                if(str[i]>='A'&&str[i]<='Z'){
+                    countUpper++;
+                }
+            }
+            if(str!=""){
+                let arrChar=[countUpper,countLower];
+                return arrChar;
+            }else{
+                return [0,0];
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let n;
+
+        do{
+            n=+prompt("Nhập số phần tử của mảng(n<20): ");
+        }while((n<=0||n>=20)||!Number.isInteger(n));
+        //thêm mảng
+        let arr=[];
+        for(let i=0;i<n;i++){
+            let item=+prompt("Nhập phần tử thứ: "+i);
+            arr.push(item);
+        }
+        //hien thi mang
+        alert(arr);
+        //tìm các số trong mảng có bội chung là 3 và 5
+        let sum=0;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]%3==0&&arr[i]%5==0){
+                sum+=arr[i];
+            }
+        }
+        //hien thi tong cac so la boi cua 3 va 5
+        alert("Tổng các số trong mảng có bội chung là 3 và 5: "+sum);
+    </script>
+</body>
+</html>

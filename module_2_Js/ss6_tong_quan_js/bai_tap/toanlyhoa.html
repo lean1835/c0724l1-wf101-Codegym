@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .an{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- yêu cầu 1
+    <button onclick="diemtb()">tinh diem tb o day ne (yeu cau 1)</button>
+     <script>
+    function diemtb(){
+        let toan = +prompt("nhap toan");
+        let ly = +prompt("nhap ly");
+        let hoa = +prompt("nhap hoa");
+        let tb= (toan+ly+hoa)/3;
+        alert("diem tb la "+ tb);
+    }
+        
+        
+        
+     </script> <br> -->
+    <!-- yêu cầu 2 -->
+     <button onclick="hienham()">nhap ham</button>
+     <div id="an" style="visibility: hidden;" >
+        <input type="number" id="toan" placeholder="nhap toan" >
+        <input type="number" id="ly" placeholder="nhap ly" >
+        <input type="number" id="hoa" placeholder="nhap hoa" >
+        <button id="cong" onclick="tb()">Diem TB (yeucau 2)</button>
+        <h1 id="avgs"></h1>
+     </div>
+    
+    <script>
+        function tb(){ //biến cục bộ
+            let a= +document.getElementById("toan").value;
+            let b= +document.getElementById("ly").value;
+            let c= +document.getElementById("hoa").value;
+            let sum= a+b+c;
+            document.getElementById("avgs").innerText= sum/3;
+        }
+        function hienham(){
+            document.getElementById("an").style.visibility="visible";
+        }
+    </script>
+</body>
+</html>

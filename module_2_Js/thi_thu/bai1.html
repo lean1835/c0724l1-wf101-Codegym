@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n;
+        let arr=[];
+        let sumOddIndex=0;  //tong le
+        let sumEvenIndex=0; //tong chan
+        do{
+            n=+prompt("Nhap vao so phan tu cua mang(n<=50): ");
+        }while(n<0||n>50);  
+        //nhap mang và tính tổng các số ở vị trí chẵn, lẻ
+        for(let i=0;i<n;i++){
+            let x=+prompt("nhap ptu thu "+i);
+            arr.push(x);
+            if(i%2==0){
+                sumEvenIndex+=x;
+            }else{
+                sumOddIndex+=x;
+            }
+        }
+        //hien thi mang
+        alert(arr);
+        //hiển thị gias trị
+        let value= sumEvenIndex-sumOddIndex;
+        alert("Hiển thị giá trị: "+value)
+    </script>
+</body>
+</html>

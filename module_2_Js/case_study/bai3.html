@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n;
+        do{
+            n=+prompt("nhap so ptu cua mang: ");
+        }while(n<=0||n>20);
+        let arr=[];
+        for(let i=0;i<n;i++){
+            let item=+prompt("nhap ptu thu "+i);
+            arr.push(item);
+        }
+        alert(arr);
+        let kt=true;
+        //1 2 3 4 5 -> 5  1 2 3 2 1
+        //0->2  1 2 3  
+        ///4->
+        //1-5,2-4,3-3
+        for(let i=0;i<arr.length/2;i++){
+            let j=(arr.length-1)-i;
+            if(arr[i]!=arr[j]){
+                kt=false;
+            }
+        }
+        if(kt){
+            alert("OK");
+        }else{
+            alert("NO");
+        }
+        
+    </script>
+</body>
+</html>

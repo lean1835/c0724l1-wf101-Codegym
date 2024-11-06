@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let result =0;// biến toàn cục có thể sử dụng trong và ngoài hàm
+    let x = 10; // biến toàn cục global
+    let y =20 ;
+    function sum(a,b) {
+        let tong = a+b;
+        return tong;
+    }
+    function sum1(a,b) {
+        let tong = a+b;
+        alert(tong);
+    }
+   // let ketQua = sum1(1,2);
+   //  console.log(ketQua);
+   //  document.write(ketQua)
+    let ketQua = sum(100,200);
+    ketQua +=60000;
+    console.log(ketQua);
+    alert(ketQua);
+    document.write(ketQua);
+
+
+</script>
+</body>
+</html>

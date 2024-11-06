@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // regex => một trình viên không thể không biết
+    // => bi
+    let a = "hello";// string
+    let b = new String ("hello"); // object
+
+    class Animal{
+        constructor(name, weight,speed) {
+            this.name = name;
+            this.weight= weight;
+            this.speed = speed;
+        }
+        // không biết kêu thế nào => tính trừu tượng
+        say(){
+
+        };
+    }
+
+    class Rat extends Animal{
+        constructor(name, weight,speed, status) {
+            super(name, weight,speed);
+            this.status =status
+        }
+
+        // thể hiện tính đa hình
+        say(text) {
+            console.log("chit chit: "+ text)
+        }
+    }
+    class Cat extends  Animal{
+        constructor(name, weight,speed) {
+            super(name, weight,speed);
+        }
+        say(text) {
+            console.log("meo meo!: "+ text)
+        }
+        //truyền 1 class vào phương thức !chú ý
+        eatMouse(mouse){
+            if (mouse.status ===true){
+                this.say("Còn sống ăn thôi")
+                this.weight += mouse.weight;
+            }else {
+                this.say("chết rồi không ăn");
+            }
+        }
+        catchMouse(mouse){
+            if (this.speed>mouse.speed){
+                this.say("Bắt được rồi");
+                mouse.say("Chết em rồi");
+                this.eatMouse(mouse)
+            }else {
+                mouse.say("Đố bắt được");
+                this.say("Tha cho mày đó");
+            }
+        }
+    }
+
+    let jerry1 = new Rat("Jerry1",1,5,true);
+    let jerry2 = new Rat("Jerry2",1,7,true);
+    let jerry3 = new Rat("Jerry3",1,5,true);
+    let tom = new Cat("Tom1",10,10);
+    //truyền 1 class vào phương thức !chú ý -> sau đó dùng từ khóa dc truyền vào có thể trỏ đến bất kì thuộc tính nào thuộc  dữ liệu truyền vào
+    tom.catchMouse(jerry1);
+    tom.catchMouse(jerry2);
+    tom.catchMouse(jerry3);
+    console.log("khối lượng của tom:" +tom.weight);
+</script>
+</body>
+</html>

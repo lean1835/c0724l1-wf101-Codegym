@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="width">
+    <input type="text" id="height">
+    <button onclick="check()">Kết quả</button>
+    <h1 id="result"></h1>
+    <script>
+        function check(){
+            let width=+document.getElementById("width").value;
+            let height=+document.getElementById("height").value;
+            let bmi= width/(height^2);
+            if (bmi < 18.5){
+                document.write("Underweight");
+            }else if (bmi < 25.0){
+                document.write("Normal");
+            }else if (bmi < 30.0){
+                document.write("Overweight");
+            }else{
+                document.write("Obese");
+            }    
+        }
+        
+    </script>
+</body>
+</html>

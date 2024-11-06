@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[2,4,8,11,35,1,77,2,9,-2];
+        let max=arr[0];
+        let sum=0;
+        let index;
+        for(let i=0;i<arr.length;i++){
+            if(max<arr[i]){
+                max=arr[i];
+                index=i;
+            }
+            sum+=arr[i];
+        }
+        alert("phan tu max trong mang la: "+ max+"    trung binh ptu la "+(sum/arr.length));
+    </script>
+</body>
+</html>

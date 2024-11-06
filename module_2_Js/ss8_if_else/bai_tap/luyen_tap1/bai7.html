@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhap phi thue bao" id="soTien">
+    <input type="text" placeholder="Nhap so phut goi" id="soPhut">
+    <button onclick="check()">Kết quả</button>
+    <h1 id="result"></h1>
+    <script>
+        function check(){
+            let phiThueBao=+document.getElementById("soTien").value;
+            let phutGoi=+document.getElementById("soPhut").value;
+            if(phiThueBao>=25000){
+                if (phutGoi<=50){
+                    let soCuoc=phutGoi*600;
+                    document.getElementById("result").innerText="so cuoc la: "+soCuoc+" | so tien con lai "+(phiThueBao-soCuoc);
+                }else if (phutGoi <= 200){
+                    let soCuoc=phutGoi*400;
+                    document.getElementById("result").innerText="so cuoc la: "+soCuoc+" | so tien con lai "+(phiThueBao-soCuoc);
+                }else{
+                    let soCuoc=phutGoi*200;
+                    document.getElementById("result").innerText="so cuoc la: "+soCuoc+" | so tien con lai "+(phiThueBao-soCuoc);
+                }
+            }else{
+                document.getElementById("result").innerText="phi thue bao khong du";
+            }          
+        }
+    </script>
+</body>
+</html> 

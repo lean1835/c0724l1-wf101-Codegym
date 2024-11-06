@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=+prompt("nhap n");
+
+        alert(findMaxNumber(n));
+        //cach 1: huong tong quat
+        function findMaxNumber(n){
+            let check= isNaN(n)||n.toString().length!=4;
+            if(check){
+                return -1;
+            }else{
+                let newArray=n.toString();
+                let max=0
+                for(let i=0;i<4;i++){
+                    //tach ptu thu i ra khoi chuoi va dung parseint de bien thanh so va so sanh
+                    let num=parseInt(newArray.slice(0,i)+newArray.slice(i+1));
+                    if(num>max){
+                        max=num;
+                    }
+                }
+                return max;
+            }
+        }
+        //cach 2:huong quy luat: ptu trc <sau -> xoa trc 
+        // function findMaxNumber(n){
+        //     let check= isNaN(n)||n.toString().length!=4;
+        //     if(check){
+        //         return -1;
+        //     }else{
+        //         let newArray=n.toString().split('');
+        //         let max=0
+        //         for(let i=0;i<newArray.length-1;i++){
+        //             if(newArray[i]<newArray[i+1]){
+        //                 newArray.splice(i,1);
+        //                 break;
+        //             }
+        //         }
+        //         if(newArray.length==4){
+        //             newArray.splice(3,1);
+        //         }
+        //         return newArray.join('');
+        //     }
+        // }
+    </script>
+</body>
+</html>

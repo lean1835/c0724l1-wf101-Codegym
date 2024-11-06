@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+            constructor(c) {
+                this.c = c;
+            }
+            toF(){
+                return ((9/5)*this.c) +32;
+            }
+            toKevin(){
+                return this.c + 273.15;
+            }
+        }
+        let nhietDo=new Temperature(25);
+        document.write("F: "+nhietDo.toF()+"<br>")
+        document.write("K: "+nhietDo.toKevin())
+    </script>
+</body>
+</html>

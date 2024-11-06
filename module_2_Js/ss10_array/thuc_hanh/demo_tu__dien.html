@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input placeholder="Enter word" id="en">
+<p id="result"></p>
+<button id="btn-search" onclick="translateVietnamese()">Search</button>
+<script>
+
+    let english = ["apple", "you", "i", "hello"];
+    let vietnamese = ["táo", "bạn", "tôi", "xin chào"];
+    // function translateVietnamese() {
+    //
+    //     let en = document.getElementById("en").value.toLowerCase();
+    //     let index = english.indexOf(en);//
+    //     if (index!=-1){
+    //         document.getElementById("result").innerText = vietnamese[index]
+    //     }else {
+    //         document.getElementById("result").innerText= "Không tìm thấy";
+    //     }
+    //
+    // }
+    function translateVietnamese() {
+//lấy index qua hàm
+        let en = document.getElementById("en").value.toLowerCase();
+
+        let index =-1;
+        for (let i = 0; i <english.length ; i++) {
+            if (english[i]===en){
+                index = i;
+                break;
+            }
+        }
+
+        if (index!=-1){
+            document.getElementById("result").innerText = vietnamese[index]
+        }else {
+            document.getElementById("result").innerText= "Không tìm thấy";
+        }
+    }
+</script>
+</body>
+</html>

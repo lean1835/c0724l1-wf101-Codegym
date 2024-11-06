@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas1" width="500" height="400" style="border: 1px solid red"></canvas>
+<script>
+    class Rectangle{
+        constructor(width,height){
+            this.width=width;
+            this.height=height;
+        }
+        setWidth(width){
+            this.width = width;
+        }
+        getWidth(){
+            return this.width;
+        }
+
+        setHeight(height){
+            this.height = height;
+        }
+
+        getHeight(){
+            return this.height;
+        }
+        // tính bao đóng
+        tinhChuVi(){
+            return (this.width+this.height)*2;
+        }
+        tinhDienTich(){
+            return this.width*this.height;
+        }
+
+        draw(x,y,color){
+            let canvas = document.getElementById("canvas1");
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle=color;
+            ctx.fillRect(x,y,this.width, this.height)
+            // ctx.rect(0,0,this.width, this.height);
+            // ctx.stroke();
+        }
+
+    }
+    let hcn = new Rectangle(10,20);
+    hcn.setWidth(200);
+    hcn.setHeight(100);
+    hcn.draw(0,0,"red");
+    let hcn2 = new Rectangle(300,200);
+    hcn2.draw(10,200,"blue");
+    // hcn.width = 1000; // không được phép => truy cập thông qua setter
+
+</script>
+</body>
+</html>

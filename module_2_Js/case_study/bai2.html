@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let x=+prompt("nhap x");
+        let y=+prompt("nhap y");
+        let z=+prompt("nhap z");
+        
+        checkTriangle(x,y,z);
+        function checkTriangle(x,y,z){
+            if(x+y>z&&x+z>y&&y+z>x){
+                if(x*x+y*y==z*z||y*y+z*z==x*x||x*x+z*z==y*y){
+                    alert("là 3 cạnh của 1 tam giác vuông");
+                }else{
+                    alert("Chỉ là 3 cạnh của một tam giác");
+                }
+            }else{
+                alert("khong phải là cạnh của 1 tam giác")
+            }
+        }
+       
+        
+    </script>
+</body>
+</html>

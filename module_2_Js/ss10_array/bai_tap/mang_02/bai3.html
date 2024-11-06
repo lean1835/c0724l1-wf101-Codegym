@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n,count=0;
+        do{
+            n=+prompt("nhap so ptu cua mang: ");
+        }while(n<0||n>50);
+        let str=[];
+        for(let i=0;i<n;i++){
+            let x=prompt("nhap ptu thu "+i);
+            str.push(x);
+        }
+        alert(str.join(','));
+        for(let i=0;i<str.length;i++){
+            if(str[i]>='0'&&str[i]<='9'){
+                count++;
+            }
+        }
+        alert("co "+count+" ki tu so ");
+    </script>
+</body>
+</html>

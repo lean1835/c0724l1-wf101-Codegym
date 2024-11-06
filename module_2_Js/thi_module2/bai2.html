@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let diemHocSinh;
+        do{
+            diemHocSinh=+prompt("Nhập số điểm của học sinh(0<=điểm<=100): ");
+        }while(diemHocSinh<0||diemHocSinh>100);
+        //hàm làm tròn điểm số
+        function lamTronDiemSo(diemSo){
+            let boiSoTiepTheo;
+            for(let i=50;i<=100;i+=5){
+                if(diemSo<i){
+                    boiSoTiepTheo=i;
+                    break;
+                }
+            }
+            if(boiSoTiepTheo-diemSo<3){
+                return boiSoTiepTheo;
+            }else{
+                return diemSo;
+            }
+        }
+        let newDiemHocSinh=lamTronDiemSo(diemHocSinh);
+        //điểm sau khi được làm tròn
+        if(diemHocSinh!=newDiemHocSinh){
+            alert(`Điểm sau khi được làm tròn là: ${newDiemHocSinh}`);
+        }else{
+            alert("Không được làm tròn, điểm số là: "+newDiemHocSinh);
+        }
+        //in ra kết quả học sinh đỗ hay trượt
+        if(newDiemHocSinh>=50){
+            alert("Đỗ");
+        }else{
+            alert("Trượt");
+        }
+    </script>
+</body>
+</html>

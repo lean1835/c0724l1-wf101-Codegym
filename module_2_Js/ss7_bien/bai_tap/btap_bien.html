@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bài 1 tính điểm trung bình toán lý hóa  -->
+    <h1>Bài 1</h1>
+    <input type="text" placeholder="toán" id="toan">
+    <input type="text" placeholder="lý" id="ly">
+    <input type="text" placeholder="hóa" id="hoa"> 
+    <br>
+    <button onclick="submit1()">submit</button>
+    <button onclick="reset1()">reset</button>
+    <h3 id="in1"></h3>
+    <!-- bài 2 chuyển độ C sang độ F -->
+    <h1>Bài 2</h1>
+    <input type="text" placeholder="nhập độ C" id="C"><br>
+    <button onclick="submit2()">submit</button>
+    <button onclick="reset2()">reset</button>
+    <h3 id="in2"></h3>
+    <!-- bài 3 tính diện tích hình tròn -->
+    <h1>Bài 3,4</h1>
+    <input type="text" placeholder="nhập bán kính" id="bankinh">
+    <h3 id="in3"></h3>
+    <button onclick="submit3()">submit</button>
+    <button onclick="reset3()">reset</button>
+    <h3 id="in3"></h3>
+    <h3 id="in4"></h3>
+    <script>
+        //cụm hàm xuất kết quả
+        function submit1(){
+            // bài 1
+            let t= +document.getElementById("toan").value;
+            let l= +document.getElementById("ly").value;
+            let h= +document.getElementById("hoa").value;
+            let tb=(t+l+h)/3;
+            document.getElementById("in1").innerHTML=tb;
+        }
+        function submit2(){
+            // bài 2
+            let do_C=  +document.getElementById("C").value;
+            let do_F=(do_C*9/5)+32;
+            document.getElementById("in2").innerHTML=do_F;
+        }
+        function submit3(){
+            // bài 3
+            const PI=3.14159;
+            let R=  +document.getElementById("bankinh").value;
+            let S= PI*R*R;
+            let C= 2*PI*R;
+            document.getElementById("in3").innerHTML="diện tích hình tròn là "+S;
+            document.getElementById("in4").innerHTML="diện tích hình tròn là "+C;
+        }
+
+        //cụm hàm reset giá trị
+        function reset1(){
+            document.getElementById("in1").innerHTML="";
+        }
+        function reset2(){
+            document.getElementById("in2").innerHTML="";
+        }
+        function reset3(){
+            document.getElementById("in3").innerHTML="";
+            document.getElementById("in4").innerHTML="";
+        }
+    </script>
+</body>
+</html>

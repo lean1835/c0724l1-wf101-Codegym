@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        class Rectangle{
+            constructor(width,height){
+                this.width=width;
+                this.height=height;
+            }
+            tinhChuVi(){
+                return (this.width+this.height)*2;
+            }
+            tinhDienTich(){
+                return this.width*this.height;
+            }
+        }
+        let hinh1= new Rectangle(300,200);
+        hinh1.width=100;;
+        hinh1.height=200;
+        alert(hinh1.tinhChuVi());
+        alert(hinh1.tinhDienTich());
+    </script>
+</body>
+</html>

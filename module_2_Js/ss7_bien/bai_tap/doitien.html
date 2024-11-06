@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en"><head></head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+           <th><label for="Amount">Amount</label></th>
+            <th>From </th>
+            <th>To</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Amount" id="Amount"></td>
+            <td>
+                <select id="From">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="To">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td><button onclick="ChangeMoney()">Convert</button></td>
+        </tr>  
+    </table>  
+    <h1 id="result"></h1>
+    <script>
+        
+        function ChangeMoney(){
+            //bien dat trong ham
+            let sotien= +document.getElementById("Amount").value;
+            let from=document.getElementById("From").value;//select sẽ trả về một giá trị của option mà nó được chọn
+            let to=document.getElementById("To").value;
+
+            if(from==to){         
+                document.getElementById("result").innerHTML="So tien sau quy doi: "+sotien+" "+from;
+            }
+            if(from=="VND"&&to=="USD")
+                document.getElementById("result").innerHTML="So tien sau quy doi: "+(sotien/23000).toFixed(2)+"USD"; //to fixed la so thap phan 
+            else 
+            document.getElementById("result").innerHTML="So tien sau quy doi: "+(sotien*23000)+"VND";
+        }
+    </script>       
+</body>
+</html>    
+    
+

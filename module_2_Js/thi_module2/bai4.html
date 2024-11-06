@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .themKH{
+            width: 100px;
+            border-radius: 8px;
+            background-color: antiquewhite;
+            font-family: segoe ui;
+            padding: 10px;
+            margin:auto ;
+        }
+        .gui{
+            border-radius: 8px;
+            width: 70px;
+            background-color: red;
+            text-align: center;
+        }
+        #table1{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Danh sách khách hàng</h1>
+    <br><br>
+    <table id="table1" border="1" style="border-collapse: collapse; width: 900px;height: 50px; ">
+        <thead>
+            <tr>
+                <th>Mã khách hàng</th>
+                <th>Tên khách hàng</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="danhSach"></tbody>
+    </table>
+    <button class="themKH" onclick="themKhachHang()">Thêm khách hàng</button>
+    <div id="nhapTT" style="visibility: hidden;">
+        <h5>Nhập vào thông tin khách hàng</h5>
+        <input type="text" id="ma" placeholder="Nhập mã khách hàng"><br>
+        <input type="text" id="ten" placeholder="Nhập tên khách hàng"><br>
+        <input type="text" id="sdt" placeholder="Nhập số điện thoại khách hàng"><br>
+        <input type="text" id="diachi" placeholder="Nhập địa chỉ khách hàng"><br>
+        <input type="text" id="email" placeholder="Nhập email khách hàng"><br>
+        <button class="gui" onclick="submit()">Submit</button>
+    </div>
+    <script>
+        let danhSachKH;
+        let infoKH=[];
+        //hien thi khach hang
+        function displayDanhSach(){
+            danhSachKH='';
+            for(let i=0;i<infoKH.length;i++){
+                danhSachKH+= `
+                                <tr>
+                                    <td>${infoKH[i].MaKH}</td>
+                                    <td>${infoKH[i].TenKH}</td>
+                                    <td>${infoKH[i].SdtKH}</td>
+                                    <td>${infoKH[i].DiaChi}</td>
+                                    <td>${infoKH[i].Email}</td>
+                                </tr>
+                
+                            `
+            }
+            document.getElementById("danhSach").innerHTML=danhSachKH;
+        }
+        //Ấn để hiện thị ô thêm khách hàng
+        function themKhachHang(){
+            document.getElementById("nhapTT").style.visibility="visible";                
+        }
+        //hàm nhận dữ liệu thêm khách hàng và hiển thị vào bảng
+        function submit(){
+            let MaKH=document.getElementById("ma").value;
+            let TenKH=document.getElementById("ten").value;
+            let SdtKH=document.getElementById("sdt").value;
+            let DiaChi=document.getElementById("diachi").value;
+            let Email=document.getElementById("email").value;   
+            if(MaKH!=''&&TenKH!=''&&SdtKH!=''&&DiaChi!=''&&Email!=''){
+                //thêm mới khách hàng
+                let newKH=new KhachHang(MaKH,TenKH,SdtKH,DiaChi,Email); 
+                infoKH.push(newKH);
+                displayDanhSach();
+                //reset ô nhập dữ liệu
+                document.getElementById("nhapTT").style.visibility="hidden";
+                document.getElementById("ma").value='';
+                document.getElementById("ten").value='';
+                document.getElementById("sdt").value='';
+                document.getElementById("diachi").value='';
+                document.getElementById("email").value='';
+            }else{
+                alert("Vui lòng nhập đầy đủ thông tin khách hàng");
+            }
+                
+        }
+        //lớp các khách hàng
+        class KhachHang{
+            constructor(MaKH,TenKH,SdtKH,DiaChi,Email){
+                this.MaKH=MaKH;
+                this.TenKH=TenKH;
+                this.SdtKH=SdtKH;
+                this.DiaChi=DiaChi;
+                this.Email=Email;
+            }
+        }
+    </script>
+</body>
+</html>

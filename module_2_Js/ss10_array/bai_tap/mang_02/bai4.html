@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n,count=0;
+        let str='hoc vien codegym frontend '
+
+        for(let i=0;i<str.length-1;i++){
+            if(str[i]==' '&&str[i+1]!==' '){
+                count++;
+            }
+            
+        }
+        if(str[0]!==' '){
+            count++;
+        }
+        
+        alert("co "+count+" tu");
+    </script>
+</body>
+</html>

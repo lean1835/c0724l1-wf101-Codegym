@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let score = +prompt("nhập điểm: ");
+    // kiểm tra, nếu score >=5 => pass module, nếu score<5 không thực hiện gì?
+    // if (score>=5){
+    //     console.log("Pass module");
+    // }else {
+    //     console.log("Fail module");
+    // }
+    // viết gọn if-else => toán tử 3 ngôi
+    // (score >= 5) ? console.log("Pass") : console.log("fail");
+    // console.log("Kết thúc chương trình");
+    // xếp loại: giỏi, khá, trung bình, yếu
+    // if bậc thang
+    // if (score>=8) {
+    //     console.log("Giỏi");
+    // }else if (score>=7) {
+    //     console.log("Khá");
+    // }else if (score>=5){
+    //     console.log("trung bình");
+    // }else  {
+    //     console.log("Yếu");
+    // }
+    // let soBuoiVangNghi =0;
+    // if (score>=5){
+    //     console.log("Pass module");
+    // }else {
+    //     if (soBuoiVangNghi==0){
+    //         console.log("Xem xét");
+    //     }else {
+    //         console.log("Fail module");
+    //     }
+    //
+    // }
+
+    // if (score>=8){
+    //     console.log("giỏi");
+    // }
+    // if (score>=7&&score<8){
+    //     console.log("khá");
+    // }
+    // if (score>=5&&score<7){
+    //     console.log("Trung bình");
+    // }
+    // if (score<5){
+    //     console.log("Yếu");
+    // }
+
+    // tìm số lớn nhất trong 3 số a, b,c
+    // let int1 = parseInt(prompt('nhập số nguyên 1'));
+    // let int2 = parseInt(prompt('nhập số nguyên 2'));
+    // let int3 = parseInt(prompt('nhập số nguyên 3'));
+    // if (int1 > int2){
+    //     if (int1 > int3){
+    //         alert (`số nguyên lớn nhất là: ${int1}`);
+    //     }else{
+    //         alert (`số nguyên lớn nhất là: ${int3}`)
+    //     }
+    // } else {
+    //     if (int2 > int3){
+    //         alert (`số nguyên lớn nhất là: ${int2}`)
+    //     else{
+    //         alert (`số nguyên lớn nhất là: ${int3}`);
+    //         }
+    //     }
+    // }
+    //
+    // let a = +prompt("Nhập số a:");
+    // let b = +prompt("Nhập số b:");
+    // let c = +prompt("Nhập số c:");
+    //
+    // if (a >= b && a >= c) {
+    //     alert("Số lớn nhất là a");
+    // } else if (b >= c) {
+    //     alert("Số lớn nhất là b");
+    // } else {
+    //     alert("Số lớn nhất là c");
+    // }
+    //
+    // nhập vào số tháng của năm => hiển thị tên tháng
+    let month = +prompt("nhập một số");// "2"
+    // switch (month) {
+    //     case 1:
+    //         console.log("tháng 1");
+    //         break;
+    //     case 2:
+    //         console.log("tháng 2");
+    //         break;
+    //     case 3:
+    //         console.log("tháng 3");
+    //         break;
+    //     default:
+    //         console.log("không phải là tháng trong năm");
+    //
+    // }
+
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            console.log("có 31 ngày");
+            break;
+        case 2:
+            console.log("có 28 ngày");
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            console.log("có 30 ngày");
+            break;
+        default:
+            console.log("không phải là tháng trong năm");
+
+    }
+        
+    // so sánh if và switch-case , khi nào dùng if bậc thang khi nào dùng switch-case
+</script>
+</body>
+</html>

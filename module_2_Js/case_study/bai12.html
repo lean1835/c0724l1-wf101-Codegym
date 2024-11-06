@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .add{
+            padding: 10px;
+            margin: 20px ;
+            background-color: greenyellow;
+            border-radius: 8px;
+
+        }
+        #edit{
+            padding: 10px;
+            margin: 20px ;
+            background-color: yellow;
+            border-radius: 8px;
+        }
+        #del{
+            padding: 10px;
+            margin: 20px ;
+            background-color: red;
+            border-radius: 8px;
+        }
+        table{
+            width: 500px;
+            padding: 30px;
+            margin-top:20px ;
+            background-color: bisque;
+            border-radius: 8px;
+        }
+        
+        span{
+            color: rgb(255, 0, 132);
+            font-size: 35px;
+
+
+            
+            display: inline-block;
+            margin-left: 30px;
+            padding: 30px;
+        }
+ 
+    </style>
+</head>
+<body>
+    <img src="https://th.bing.com/th/id/OIP.KhxL1GzSQvGunZaCaK2OXAAAAA?rs=1&pid=ImgDetMain" alt="" width="100px" height="100px">
+    <span><i class="fa-regular fa-heart"></i></span>
+    <br>
+    <button class="add" onclick="addStudent()">Thêm mới học viên</button>
+    <button id="edit" onclick="editStudent()">Sửa thông tin học viên</button>
+    <button id="del" onclick="delStudent()">Xóa học viên</button>
+    <table border="1" style="border-collapse:collapse ;" id="table1">
+        <thead>
+            <tr>
+                <td>Mã học viên</td>
+                <td>Tên</td>
+                <td>Lớp</td>
+                <td>Email</td>
+                <td>Ngày Sinh</td>
+            </tr>
+        </thead>
+        <tbody id="in4">
+
+        </tbody>
+    </table>
+    <script>
+        let studentTable='';
+        let infoStudent=[];
+        class Student{
+            constructor(id,name,classStudent,mail,date){
+                this.id=id;
+                this.name=name;
+                this.classStudent=classStudent;
+                this.mail=mail;
+                this.date=date;
+            }
+        }
+        function displayStudent(){
+            studentTable='';
+            for(let i=0;i<infoStudent.length;i++){
+                studentTable += `
+                                <tr>
+                                    <td>${infoStudent[i].id}</td>
+                                    <td>${infoStudent[i].name}</td>
+                                    <td>${infoStudent[i].classStudent}</td>
+                                    <td>${infoStudent[i].mail}</td>
+                                    <td>${infoStudent[i].date}</td>
+                                </tr>
+                                `;
+            }
+            document.getElementById('in4').innerHTML=studentTable;
+        }
+        function addStudent(){
+            let id;
+            let date;
+            let name
+            let checkName=/^.{1,50}$/;
+            let checkRegexId = /^HV-\d{4}$/;  //^\d{2}/\d{2}/\d{4}$
+            let checkRegexDate = /^\d{2}\/\d{2}\/\d{4}$/;
+
+            //nhap id
+            do{
+                id=prompt("Nhap id (dạng HV-XXXX )");
+            }while(!checkRegexId.test(id));
+            //nhap ten
+            do{
+                name=prompt("Nhap ten");
+            }while(!checkName.test(name));
+            //nhap ten lopp
+            let classStudent=prompt("Nhap ten lop");
+            //nhap mail
+            let mail=prompt("Nhap mail: ");
+            //nhap ngay sinh
+            do{
+                date=prompt("Nhập ngày sinh: ");
+            }while(checkRegexDate.test(date));
+            let newStudent= new Student(id,name,classStudent,mail,date);
+            infoStudent.push(newStudent);
+            displayStudent();
+        }
+        function editStudent(){
+            let findID=prompt("Nhập id cần sửa");
+            let index=null;
+            for(let i=0;i<infoStudent.length;i++){
+                if(infoStudent[i].id==findID){
+                    index=i;
+                    break;
+                }
+            }
+
+            let checkName=/^.{1,50}$/;
+            let checkRegexDate = /^\d{2}\/\d{2}\/\d{4}$/;
+            if(index!=null){
+                do{
+                infoStudent[index].name=prompt("Nhap ten");
+                }while(!checkName.test(infoStudent[index].name));
+                //nhap ten lopp
+                infoStudent[index].classStudent=prompt("Nhập tên lớp");
+                //nhap mail
+                infoStudent[index].mail=prompt("Nhập mail: ");
+                //nhap ngay sinh
+                do{
+                    infoStudent[index].date=prompt("Nhập ngày sinh: ");
+                }while(checkRegexDate.test(infoStudent[index].date));
+                displayStudent();  
+            }else{
+                alert("Không tìm thấy học viên");
+            }
+
+        }
+        function delStudent(){
+            let findID=prompt("Nhập id của học viên cần xóa");
+            let index=null;
+            for(let i=0;i<infoStudent.length;i++){
+                if(infoStudent[i].id==findID){
+                    index=i;
+                    break;
+                }
+            }
+            if(index!=null){
+                infoStudent.splice(index,1);
+            }else{
+                alert("Không tìm thấy học viên");
+            }
+            displayStudent();  
+        }
+    </script>
+</body>
+</html>

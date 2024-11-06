@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bai 1
+        let colours=["Red","Green","While","Black"];
+        alert(colours.join())
+        //bai 2
+        let numbers=[2,5,3,2,8,4,9];
+        let resultNum=[numbers[0]];
+        for(let i=1;i<numbers.length;i++){
+            if(numbers[i-1]%2==0&&numbers[i]%2==0){
+                resultNum.push("-",numbers[i]);
+            }else{
+                resultNum.push(numbers[i]);
+            }
+        }
+        alert(resultNum.join(''));
+        //bai3
+        // Khai báo và khởi tạo chuỗi đầu vào
+        var str = 'The Quick Brown Fox';
+
+        // Định nghĩa các hằng số cho chữ hoa và chữ thường
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+        // Khởi tạo mảng để lưu trữ kết quả
+        var result = [];
+
+        // Lặp qua từng ký tự trong chuỗi đầu vào
+        for (var x = 0; x < str.length; x++) {
+        // Kiểm tra xem ký tự hiện tại có phải là chữ hoa không
+        if (UPPER.indexOf(str[x]) !== -1) {
+            // Chuyển chữ hoa thành chữ thường và thêm vào mảng kết quả
+            result.push(str[x].toLowerCase());
+        }
+        // Kiểm tra xem ký tự hiện tại có phải là chữ thường không
+        else if (LOWER.indexOf(str[x]) !== -1) {
+            // Chuyển chữ thường thành chữ hoa và thêm vào mảng kết quả
+            result.push(str[x].toUpperCase());
+        }
+        // Nếu ký tự hiện tại không phải là chữ hoa hoặc chữ thường, thêm nó vào mảng kết quả như ban đầu
+        else {
+            result.push(str[x]);
+        }
+        }
+
+        // Xuất kết quả là chuỗi được ghép từ mảng kết quả
+        alert(result.join(''));
+
+
+    </script>
+</body>
+</html>

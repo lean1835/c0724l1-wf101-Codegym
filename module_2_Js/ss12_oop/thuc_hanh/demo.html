@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // khởi tạo đối tượng trực tiếp
+    let array = new Array();
+
+
+    // let student1 = {
+    //     id : 1,
+    //     name: "chánh",
+    //     age: 40,
+    //     // hành vi => method (phương thức)
+    //     study: function(subject) {
+    //         console.log(`${this.name} Học viên" đang học môn :  ${subject}`)
+    //     }
+    // }
+    // // có khuôn mẫu nào để tạo ra đối tượn
+    
+    // console.log("Tên học viên là : "+ student1.name);
+    // student1.name = "Phong";
+    // console.log("Tên học viên là : "+ student1.name);
+    // student1.study("Toán");
+    //  tên class đặt tên theo PascalCase
+    // tạo lớp Student bằng function
+
+    let Student = function (id, name,age){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        // hành vi => method
+        this.study = function (subject) {
+            console.log(`${this.name} Học viên" đang học môn :  ${subject}`)
+        }
+    }
+
+
+    // tạo một đối tượng sinh viên từ 1 lớp Student
+    // let student2 = new Student(2,"chánh",30);
+    //
+    // student2.study("Văn");
+    // let student3 = new  Student(3,"chánh3",34);
+    // student3.name= " Trần văn chánh";
+    // console.log(student3.name)
+
+    // tạo class SinhVien bằng từ khoá class của ES6 => js 2015
+
+    class SinhVien {
+        // hàm /method nhưng nó đặc biệt
+        // => sự dụng để khởi tạo đối tương và khai báo thuộc tính
+        constructor(id, name,age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+        study(subject){
+            console.log(`${this.name} Học viên" đang học môn :  ${subject}`)
+        }
+
+        getId(){
+            return this.id;
+        }
+
+        setId(id){
+            this.id = id;
+        }
+
+    }
+
+    let sv1 = new SinhVien(10,"Linh", 20);
+    sv1.id =20;
+    sv1.setId(20);
+    sv1.study("Hoá");
+
+
+
+</script>
+</body>
+</html>

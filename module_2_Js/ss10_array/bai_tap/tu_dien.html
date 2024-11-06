@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Nhập từ:</span>
+    <input type="text" id="input">
+    <button id="result" onclick="traCuu()">Dịch</button>
+    <h4 id="ketQua"></h4>
+    <script>
+        let eng=["apple","banana","book"];
+        let vie=["táo","chuối","sách"];
+        function traCuu(){
+            let words=document.getElementById("input").value;
+            for(let i=0;i<eng.length;i++){
+                if(words==eng[i]){
+                    document.getElementById("ketQua").innerText=vie[i];
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

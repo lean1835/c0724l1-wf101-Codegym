@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x;
+        x=prompt("nhap x: ");
+        let regex=/^\d{1,2}\/\d{1,2}$/;
+        find(x);
+        function ucln(a,b){
+            if (b == 0)
+            return a;
+            return ucln(b, a % b);
+        }
+        function find(x){
+            let regex=/^\d{1,2}\/\d{1,2}$/;
+            let check=regex.test(x);
+            if(!check){
+                alert("Không phải là phần số");
+                return;
+            }
+            let [tuSo,mauSo]=x.split('/').map(Number);
+            if(mauSo==0){
+                alert("Không phải là phần số");
+                return;
+            }
+            if(tuSo==0){
+                alert("0");
+                return;
+            }
+            let uocSo=ucln(tuSo,mauSo);
+            let tuMin=tuSo/uocSo;
+            let mauMin=mauSo/uocSo;
+            alert(tuMin+"/"+mauMin);
+        }
+    </script>
+</body>
+</html>

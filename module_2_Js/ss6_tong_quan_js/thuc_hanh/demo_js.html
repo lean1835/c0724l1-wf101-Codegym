@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <p id="display1" onmouseover="display2()">Nội dung</p> <!--onmouse over là di chuột qua và mỗi lần di chuột qua sẽ thực hiện hàm display2 một lần -->
+<p id="display2">Nội dung</p>
+<input id="input1" oninput="display1()" placeholder="Nhập n1">
+<input id="input2" placeholder="Nhập n2">
+<button onclick="cong()">Cộng</button>
+<h1 id="result"></h1>
+<!--<h1 onmouseover="change1()" id="content">HELLO</h1>-->
+<!--<button onclick="document.getElementById('content').append('Viet Nam')">Change Content</button>-->
+<!--<button onclick="document.getElementById('content').style.color='red'">Change Style</button>-->
+<!--<script src="myjs.js"></script>-->
+<script>
+   // các hàm ouput/display (ctrl + /)
+   /* alert("Hello"); // 1 câu  lệnh (statement)
+    console.log("Hiển thị ở cửa sổ console");
+    document.write("Hiển thị trên trang html");
+    document.getElementById("display1").innerText = "<button>Nội dung mới</button>";
+    document.getElementById("display2").innerHTML = "<button>Nội dung mới</button>";
+    document.getElementById("input1").value="Nội dung thẻ input";
+    */
+
+    // các hàm nhập dữ liệu:
+   // let a = +prompt("nhập giá trị a");
+   // let b = +prompt("nhập giá trị b");
+   // let sum = a+b;
+   // alert("tổng 2 số a và b "+ sum);
+   // let b = confirm("bạn có muốn xoá hay không??");
+   // alert(b);
+   function cong() {
+     let n1 = +document.getElementById("input1").value; //lấy giá trị từ hàm input và gán biến
+     let n2 = +document.getElementById("input2").value; //lấy giá trị từ hàm input và gán biến
+     let sum = n1+n2;
+     document.getElementById("result").innerText= sum;
+   }
+   function display1() {
+       let n1 = +document.getElementById("input1").value;  //lấy giá trị từ hàm input
+       console.log(n1);
+   }
+   function display2() {
+       console.log("Hello") //thực hiện in ra cửa sổ console hello và lặp nhiều lần tương ứng số lân di chuột
+   }
+
+</script>
+</body>
+</html>

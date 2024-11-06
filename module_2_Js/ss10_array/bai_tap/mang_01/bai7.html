@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr=[-2,4,8,11,-35,1,77,2,9,-2];
+        
+        let k,n;
+        let check=false;
+        //nhap mang
+        do{
+            n=+prompt("nhap n: ");
+        }while(n<0||n>50);
+        let arr= [];
+        for(let a=0;a<n;a++){
+            let x=+prompt("nhap gia tri cua phan tu thu "+a);
+            arr.push(x); 
+        }
+        //---------------
+        alert(arr.join(','));  
+        let v=+prompt("Nhap so v");
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]==v){
+                k=i;
+                check=true;
+                break;             
+            }
+        }
+        if(check==false){
+            alert("khong tim thay v trong mang");
+        }else{
+            for(let i=0;i<arr.length;i++){
+                if(v==arr[i]){
+                    for(let j=i;j<arr.length-1;j++){
+                        arr[j]=arr[j+1];
+                    }
+                    i--;
+                    arr[arr.length-1]=0;
+                    
+                }
+                
+            }
+            alert(arr.join(','));
+           
+        }
+               
+             
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     // tham trị: pass value:  khi gọi hàm truyền đối số có kiểu là nguyên thuỷ
+     // number, string, boolean, underfine
+     // => khi thay đổi bên trong hàm thì ngoài hàm không thay đổi.
+    // function change1(num) {
+    //    num ++;
+    //     console.log("numb trong hàm: "+ num);//
+    // }
+    // let a =10;
+    // change1(a);
+    // console.log("a sau khi gọi hàm : "+ a);//
+    //  // tham chiếu : pass reference: khi gọi hàm truyền đối số dạng đối tượng (array), Date
+    //  // => khi thay đổi tròng hàm thì ngoài hàm thay đổi =
+    // function changeArray(arr) {
+    //     arr[0]=100;
+    //     console.log(arr);// arr[0]
+    // }
+    // let array = [0,2];
+    // changeArray(array);
+    // console.log(array); // array[0]
+/// [1,2,3,4,5,6,7] => [7,6,5,4,3,2,1]
+    function daoMang(mang) {
+        for (let i = 0; i <mang.length/2 ; i++) {
+            let temp = mang[i]
+            mang[i]= mang[mang.length-1-i];
+            mang[mang.length-1-i] =temp;
+        }
+    }
+    let arr =[1,2,3,4,5,6,7];
+    daoMang(arr);
+    console.log(arr);
+
+    //  function daoMang2(mang) {
+    //      let arrayResult =[]
+    //      for (let i = mang.length-1; 0<=i; i--) {
+    //          arrayResult.push(mang[i]);
+    //      }
+    //      return arrayResult;
+    //  }
+
+    // arr= daoMang2(arr);
+    //  console.log(arr);
+</script>
+</body>
+</html>

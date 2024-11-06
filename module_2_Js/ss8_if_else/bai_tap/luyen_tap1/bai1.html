@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input_a">
+    <input type="text" id="input_b">
+    <button onclick="check()">Kết quả</button>
+    <h1 id="result"></h1>
+    <script>
+        function check(){
+            let a=+document.getElementById("input_a").value;
+            let b=+document.getElementById("input_b").value;
+            if(a%b==0){
+                document.getElementById("result").innerHTML="a chia het cho b";
+            }else{
+                document.getElementById("result").innerHTML="a khong chia het cho b";
+            }
+                
+        }
+    </script>
+</body>
+</html>

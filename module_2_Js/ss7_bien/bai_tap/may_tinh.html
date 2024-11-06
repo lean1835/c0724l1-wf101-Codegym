@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maytinh</title>
+</head>
+<body>
+    <input type="text" id="n1">
+    <input type="text" id="n2">
+    <button  onclick="caculator('+')">+</button>
+    <button  onclick="caculator('-')">-</button>
+    <button  onclick="caculator('*')">*</button>
+    <button  onclick="caculator('/')">/</button>
+    <h1 id="result"></h1>
+    <script>
+        let n1=document.getElementById("n1");
+        let n2=document.getElementById("n2");
+        function caculator(toanTu){
+            let num1= +n1.value;
+            let num2= +n2.value;
+            let result=eval(num1+toanTu+num2);  
+            document.getElementById("result").innerText=result;
+        }
+    </script>
+</body>
+</html>

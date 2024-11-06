@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nhapTuoi">
+    <button onclick="check()">Kết quả</button>
+    <h1 id="result"></h1>
+    <script>
+        function check(){
+            let tuoi=+document.getElementById("nhapTuoi").value;
+            if(tuoi>=15){
+                document.getElementById("result").innerHTML="du tuoi vao lop 10";
+            }else {
+                document.getElementById("result").innerHTML="k du tuoi vao lop 10";
+            }          
+        }
+    </script>
+</body>
+</html>
