@@ -30,11 +30,24 @@ export function addNewStudent(student) {
 // kết nối API để thêm mới
     listStudents.push(student);
 }
-export function deleteStudentsId(id) {
-  for (let i = 0; i <listStudents.length ; i++) {
-     if (listStudents[i].id==id){
-         listStudents.splice(i,1);
-         break;
-     }
+// export function deleteStudentsId(id) {
+//   for (let i = 0; i <listStudents.length ; i++) {
+//      if (listStudents[i].id==id){
+//          listStudents.splice(i,1);
+//          break;
+//      }
+//   }
+// }
+
+export function deleteStudentById(id){
+  for(let i=0;i<listStudents.length;i++){
+    if(listStudents[i].id==id){
+        listStudents.splice(i,1);
+        break;
+    } 
   }
+}
+
+export function searchByNamme(nameSearch){
+  return listStudents.filter((student)=>student.name.includes(nameSearch))
 }

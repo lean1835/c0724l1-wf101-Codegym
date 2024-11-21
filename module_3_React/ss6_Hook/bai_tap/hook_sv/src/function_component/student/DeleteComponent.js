@@ -1,8 +1,8 @@
 
 //mới hiện modal
 import React from "react";
-import {deleteStudentsId, getAllStudent} from "../service/studentService";
-const DeleteComponent =({handleShowModal},{isShowModal})=>{
+import {deleteStudentById, getAllStudent} from "../service/studentService";
+const DeleteComponent =({isShowModal, handleShowModal,nameDelete,handleCloseModal,handleReload})=>{
 
     // const handleDelete= ()=>{
     //     console.log("-------delete------------")
@@ -12,6 +12,12 @@ const DeleteComponent =({handleShowModal},{isShowModal})=>{
     //     handleReload();
     // }
 
+    const handleDelete=()=>{
+        deleteStudentById(nameDelete.id);
+        handleCloseModal();
+        handleReload();
+        console.log(getAllStudent());
+    }
 
 
         return (
@@ -23,11 +29,11 @@ const DeleteComponent =({handleShowModal},{isShowModal})=>{
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <p>Do you want to delete .{this.props.deleteStudent.name}???</p>
+                            <p>Do you want to delete {nameDelete.name} ???</p>
                         </div>
                         <div className="modal-footer">
-                            <button  onClick={handleShowModal} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button  onClick={handleDelete} type="button" className="btn btn-primary">Delete</button>
+                            <button  onClick={handleCloseModal} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button onClick={handleDelete}  type="button" className="btn btn-primary">Delete</button>
                         </div>
                     </div>
                 </div>

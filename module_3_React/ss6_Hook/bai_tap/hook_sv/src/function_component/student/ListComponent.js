@@ -1,14 +1,17 @@
 /* eslint-disable react/jsx-no-undef */
-import React,{useEffect,useState} from "react"
-import { getAllStudent } from "../service/studentService";
+import React,{useEffect,useState,useRef} from "react"
+import { deleteStudentById, getAllStudent,searchByNamme } from "../service/studentService";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 import AddComponent from "./AddComponent";
 import DeleteComponent from "./DeleteComponent";
+
 const ListComponent =()=>{
     const [listStudents,setListStudent]=useState([]);
     const [isReload,setIsReload]=useState(false);
     const [isShowModal,setIsShowModal]=useState(false);
+    const [nameDelete,SetNameDelete]=useState({id:"",name:"",phone:"", email:""})
+    const nameRef=useRef();
     useEffect(()=>{
         setListStudent((pre)=>(
             [
@@ -20,12 +23,30 @@ const ListComponent =()=>{
     const handleReload=()=>{
         setIsReload((prevState)=>!prevState)
     }
-    const handleShowModal=()=>{
+    const handleShowModal=(student)=>{
         setIsShowModal((prevState)=>!prevState)
+        SetNameDelete(()=>({
+            ...student
+        }))
+
+    }
+    const handleCloseModal=()=>{
+        setIsShowModal((prevState)=>!prevState)
+    }
+    const handleSearch=()=>{
+        const nameSearch=nameRef.current.value;
+        let listSearch=searchByNamme(nameSearch)
+        setListStudent(()=>[
+            ...listSearch
+        ])
     }
     return(
         <>
             <AddComponent handleReload={handleReload}/>
+            <form>
+                <input type="text" ref={nameRef} placeholder="Nhap thu muon tim"/>
+                <button type="button" onClick={handleSearch}>Search</button>
+            </form>
             <table className={'table table-dark'}>
                 <thead>
                 <tr>
@@ -51,7 +72,7 @@ const ListComponent =()=>{
                 ))}
                 </tbody>
             </table>
-            <DeleteComponent  handleShowModal={handleShowModal} isShowModal={isShowModal}/>
+            <DeleteComponent handleReload={handleReload} handleCloseModal={handleCloseModal} nameDelete={nameDelete}  handleShowModal={handleShowModal} isShowModal={isShowModal}/>
         </>
     )
         
