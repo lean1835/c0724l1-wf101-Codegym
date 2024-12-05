@@ -9,6 +9,10 @@ function ListSearchComponent({listStudents}){
 //         return false;
 //     else return true;
 // }
+const isCheck=false;
+const handleCheck=()=>{
+
+}
 
     return(
         <>

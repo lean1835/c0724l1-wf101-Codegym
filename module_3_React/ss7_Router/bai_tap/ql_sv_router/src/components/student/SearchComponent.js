@@ -5,6 +5,7 @@ import { deleteStudentById, getAllStudent,searchByNamme } from "../../service/st
 import ListSearchComponent from "./ListSearchComponent"
 function SearchComponent(){
 //     const nameSearch=nameRef.current.value;
+const isCheck=false;
 const handleSearch=()=>{
     const nameSearch=nameRef.current.value;
     let listSearch=searchByNamme(nameSearch)
@@ -12,6 +13,7 @@ const handleSearch=()=>{
         ...listSearch
     ])
     // SetIsCheck(()=>isCheck=true);
+
 }
     // const [isCheck,SetIsCheck]=useState(false);
     const nameRef=useRef();

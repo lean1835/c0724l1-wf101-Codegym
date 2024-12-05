@@ -51,3 +51,11 @@ export function deleteStudentById(id){
 export function searchByNamme(nameSearch){
   return listStudents.filter((student)=>student.name.includes(nameSearch))
 }
+
+export function getStudentById(id){
+  for(let i=0;i<listStudents.length;i++){
+    if(listStudents[i].id==id)
+      return listStudents[i];
+  }
+  return null;
+}

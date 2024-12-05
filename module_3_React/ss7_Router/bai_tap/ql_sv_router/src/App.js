@@ -7,6 +7,7 @@ import {Routes,Route} from 'react-router-dom'
 import AddComponent from './components/student/AddComponent';
 import HomeComponent from './components/HomeComponent';
 import SearchComponent from './components/student/SearchComponent';
+import DetailComponent from './components/student/DetailComponent';
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
         <Route path='/home' element={<HomeComponent/>}></Route>
         <Route path='/list/add' element={<AddComponent/>}></Route>
         <Route path='/list/search' element={<SearchComponent/>}></Route>
+        <Route path={'/list/detail/:id'} element={<DetailComponent/>}></Route>
       </Routes>
     </>
   );
