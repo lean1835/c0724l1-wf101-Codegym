@@ -1,0 +1,76 @@
+{
+  "Students": [
+    {
+      "id": 1,
+      "name": "an",
+      "gender": "man",
+      "class": {
+        "id": 1,
+        "name": "ktpm"
+      },
+      "color": [
+        "đỏ",
+        "vàng"
+      ],
+      "phone": "082793643",
+      "email": "anle@cgym"
+    },
+    {
+      "id": 2,
+      "name": "anh",
+      "gender": "woman",
+      "class": {
+        "id": 2,
+        "name": "khmt"
+      },
+      "color": [
+        "vàng"
+      ],
+      "phone": "112643",
+      "email": "anhgoc@cgym"
+    },
+    {
+      "id": 3,
+      "name": "hiep",
+      "gender": "man",
+      "class": {
+        "id": 3,
+        "name": "sp toan"
+      },
+      "color": [
+        "xanh"
+      ],
+      "phone": "5593643",
+      "email": "huuhiep@cgym"
+    },
+    {
+      "id": 21343,
+      "name": "dsfd",
+      "gender": "man",
+      "class": {
+        "id": 2,
+        "name": "khmt"
+      },
+      "color": [
+        "vàng",
+        "tím"
+      ],
+      "phone": 435,
+      "email": "ASsfd34"
+    }
+  ],
+  "Class": [
+    {
+      "id": 1,
+      "name": "ktpm"
+    },
+    {
+      "id": 2,
+      "name": "khmt"
+    },
+    {
+      "id": 3,
+      "name": "sp toan"
+    }
+  ]
+}
