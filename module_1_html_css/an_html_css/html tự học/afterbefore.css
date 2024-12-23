@@ -1,0 +1,24 @@
+.chu {
+    position: relative;
+    text-decoration: none;
+    margin-right: 2px;
+
+}
+.chu span {
+color: black;
+}
+.chu:after{
+content:'';
+width: 0%;
+height: 2px;
+position: absolute;
+bottom: 0px;
+left: 0px;
+opacity: 0;
+background-color: rgb(231, 203, 19);
+transition: 0.5s;
+}
+.chu:hover:after{
+width: 100%;
+opacity: 1;
+}

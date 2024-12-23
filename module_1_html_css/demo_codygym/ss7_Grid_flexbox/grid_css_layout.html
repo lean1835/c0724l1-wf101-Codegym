@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            background-color: #cccccc;
+            min-height: 50%;
+            grid-gap: 2% 0.5%;
+        }
+
+        .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5 {
+            background-color: blue;
+
+        }
+
+        .grid-item1 {
+            grid-column: 1/4;
+        }
+
+        .grid-item5 {
+            grid-column: 1/4;
+        }
+
+        @media screen and (max-width: 500px) {
+            .grid-item2, .grid-item3, .grid-item4 {
+                grid-column: 1/4;
+            }
+
+            /*.grid-container {*/
+            /*    grid-template-columns:100%;*/
+            /*    flex-wrap: wrap;*/
+            /*}*/
+
+        }
+
+        @media screen and (min-width: 501px) and (max-width: 700px) {
+
+        }
+
+        .grid-main {
+
+        }
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="grid-item1">nav</div>
+    <div class="grid-item2">Left</div>
+    <div class="grid-item3 grid-main">Main</div>
+    <div class="grid-item4">right</div>
+    <div class="grid-item5">footer</div>
+</div>
+</body>
+</html>

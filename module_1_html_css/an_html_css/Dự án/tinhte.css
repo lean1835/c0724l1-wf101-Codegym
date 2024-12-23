@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    img{width: 100%;}
+.container3{
+    margin:0  auto;
+    width: 85%;
+}
+.container3 .main3{
+    width: 100% ;
+}
+.container3 nav{
+    font-size: 25px;
+    font-weight: 600;
+} 
+.container3 .main3 .left3{
+    width: 70% ;
+    float: left;
+}
+.container3 .main3 .left3 .threads3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.container3 .main3 .left3 .threads3 a{
+    text-decoration: none;
+    display: flex;
+    width: 47%;
+    padding: 16px 12px 0px ;
+}
+.container3 .main3 .left3 .threads3 a .label3{
+    color: #98A2BA;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+}
+.container3 .main3 .left3 .threads3 a .nd{
+    margin-left: 8px;
+}
+.container3 .main3 .left3 .threads3 a .nd p.nd_title{
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: black;
+    width: 93.5%;
+}
+.container3 .main3 .left3 .threads3 a .nd p.nd_title:hover{
+    color: rgb(74,145,235);
+}
+.container3 .main3 .left3 .threads3 a .nd p.nd_small{
+    color: rgb(111,117,129);
+    font-size: 13px;
+}
+
+/* widget */
+
+.container3 .main3 .left3 .widget3{
+    background-color: rgb(108,126,225);
+    padding: 24px 24px 10px 24px;
+    border-radius: 8px;
+    width: 95%;
+}
+.container3 .main3 .left3 .widget3 .head{
+    padding: 0px 0px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.container3 .main3 .left3 .widget3 .head h3{
+    color: white;
+    font-size: 18px;
+}
+.container3 .main3 .left3 .widget3 .head a{
+    color: white;
+    font-weight: 600;
+    line-height: 18px;
+    background-image: linear-gradient(94.95deg,#2AF598 -43.99%,#0049FD 106.14%) ;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 7px 14px;
+    border-radius: 4px;
+}
+.container3 .main3 .left3 .widget3 .news{
+    overflow-x: auto;
+    height: 250px;
+    width: 100%;
+    display: flex;
+  
+    }
+    /* Tùy chỉnh độ rộng thanh cuộn */
+    ::-webkit-scrollbar {
+        width: 14px;
+        height: 10px;
+        background-color:rgb(226,226,226);
+        border-radius: 8px;
+
+    }    
+    /* Tùy chỉnh phần thumb (nút kéo) của thanh cuộn */
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 3px solid rgb(185,185,185);
+        background-color: rgb(185,185,185);
+    }
+
+.container3 .main3 .left3 .widget3 .news a.news_link{
+    text-decoration: none;
+    width: 230px;
+    margin: 0px 14px 7px 0px;
+}
+.container3 .main3 .left3 .widget3 .news a.news_link .img3{
+    width: 200px; 
+}
+.container3 .main3 .left3 .widget3 .news a.news_link p.news_small{
+    font-size: 13px;
+    color: #E5E6ED;
+    font-family: Lato, arial;
+}
+.container3 .main3 .left3 .widget3 .news a.news_link p.news_title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: white;
+}
+.container3 .main3 .left3 .widget3 .news_open{
+    margin: 0;
+    width: 100%;
+    padding: 7px 16px;
+   text-align: center;
+   background-color: rgb(21,112,239);
+   border-radius: 8px;
+}
+.container3 .main3 .left3 .widget3 .news_open a{
+    text-decoration: none;
+    color: white;
+    font-weight: 550;
+    display: block;
+}
+.container3 .main3 .right3{
+    width: 28%;
+    float: left;
+    /* margin-left: 20px; */
+    padding: 14px;
+    padding-top: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.368);
+    height: auto;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 100px;
+}
+.container3 .main3 .right3:hover{
+    border: 3px solid rgb(0, 191, 255);
+}
+.container3 .main3 .right3 nav.right{
+    font-size: 20px;
+    /* padding: 14px; */
+    margin-bottom: 15px;
+}
+.container3 .main3 .right3 .right_main{   
+    width: 100%;   
+    margin: 0px 0px;
+
+}
+.container3 .main3 .right3 .right_main .main_content{
+    float: left;
+    margin-left: 8px;
+    width: 45%;
+    height: auto;
+    margin: 12px 0px 12px 8px;
+}
+.container3 .main3 .right3 .right_main .main_content img{
+    border-radius: 5px;
+}
+.container3 .main3 .right3 .right_main .main_content p{}
+.container3 .main3 .right3 .right_view{
+    padding: 7px 0px;
+    background-color: rgb(229,230,237);
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 20px;
+    display: block;
+    clear: left;
+}
+.container3 .main3 .right3 .right_view a{
+    display: block;
+    padding: 0 -9px;
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (max-width:960px) {
+    .container3 .main3 .left3{
+        width: 100%;
+    }
+    .container3 .main3 .right3{
+        width: 100%;
+    }
+    .container3 .main3 .right3 .right_main{
+        margin-left: 20px;
+    }
+}

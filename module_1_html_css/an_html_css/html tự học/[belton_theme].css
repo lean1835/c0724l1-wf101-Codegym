@@ -1,0 +1,130 @@
+*{margin: 0; padding: 0;}
+:root {
+    --font1: 'Oswald', sans-serif ;
+    --size1:48px;
+    --lineheight:59px;
+    --font2: "Amiri", serif;
+    --size2: 17px;
+    --color2: #666 ;
+    --size3:22px;
+}
+.banner_top{
+    background: url(https://belton.joomlastars.co.in/images/fullscreen03.jpg) top center;
+    /* top center sau link kia là để xét vị trí : ở giữa và ở đầu */
+    height: 600px;
+    background-size: cover;
+    /* bao phủ kéo dãn full size của màn  */
+    position: relative;
+    background-attachment: fixed;
+}
+.banner_top:before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, #0b06098f 10%, #0a0a0e06 50%, rgba(0, 0, 0, 0.732) 90%);
+    
+}
+.banner_top ._3cot {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.banner_top ._3cot ._1cot {
+    width: 33.33%;
+}
+.banner_top ._3cot ._1cot.cottrai {}
+.banner_top ._3cot ._1cot.cottrai a{
+    font-size: 25px;
+    color: white;
+    display: inline-block;
+    padding: 20px 30px;
+
+}
+.banner_top ._3cot ._1cot.cottrai a:hover{
+    color: rgb(92, 7, 182);
+}
+
+.banner_top ._3cot ._1cot.cotgiua{
+    text-align: center;
+}
+.banner_top ._3cot ._1cot.cotgiua img{
+    height: 40px;
+    padding-top: 20px;
+}
+
+.banner_top ._3cot ._1cot.cotphai{
+    text-align: right;
+    padding: 10px 20px;
+}
+.banner_top ._3cot ._1cot.cotphai a{
+    font-size: 15px;
+    color: whitesmoke;
+    padding: 15px 15px;
+    display: inline-block;
+}
+.text_banner{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    color: white ;
+    
+}
+.text_banner .content{
+    width: 1170px;
+    margin: auto;
+}
+.text_banner .content .small{}
+.text_banner .content h1{
+    font-family: var(--font1);
+    font-size: var(--size1);
+    line-height: var(--lineheight);
+    color: white;
+    width: 50%;
+}
+
+
+
+/* end css top */
+
+.content1 {
+    width: 1170px;
+    margin: auto;
+    padding: 80px 0;
+    display: flex;
+    font-family: var(--font2);
+    font-size: var(--size2);
+    color: var(--color2);
+}
+.content1 .left{
+    width: 35%;
+}
+.content1 .left span{}
+.content1 .left h2{
+    font-family: var(--font2);
+    font-size: var(--size3);
+    width: 50%;
+}
+.content1 .right {
+    width: 65%;
+}
+.content1 .right p{
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+
+.content1 .right p:before{
+    content: "\f178";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: relative;
+    left: -10px;
+    transition: 0.4s;
+    opacity: 0;
+}
+.content1 .right p:hover:before{
+    left: 0px;
+    opacity: 1;
+}

@@ -1,0 +1,60 @@
+*{margin: 0; padding: 0;}
+.menutop{
+    width: 100%;
+    height: 40px;
+    border: 1px solid gray;
+}
+.menutop > ul{
+    display: flex;
+    list-style: none;
+}
+.menutop > ul >li {}
+.menutop > ul >li a{
+    text-decoration: none;
+}
+._1item {
+    position: relative;
+    height: 40px;
+    background-color: bisque;
+    line-height: 40px   ;
+}
+._1item a.layer1{
+    color: rgb(84, 83, 83);
+    padding: 10px 20px;
+}
+._1item:hover a.layer1{
+    color: white;
+    background-color: rgb(124, 124, 124);   
+}
+._1item:hover .layer1{}
+._1item .layer2{
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    width: 200px;
+    background-color: rgb(222, 222, 222)  ;
+}
+._1item:hover .layer2{
+    visibility: visible;
+    opacity: 1;
+    top: 50px;}
+._1item .layer2 ul{
+    list-style: none;
+}
+._1item .layer2 ul li{}
+._1item .layer2 ul li a{
+    display: block;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-family: segoe ui light;
+    color: black;
+    border-bottom: 1px solid rgb(107, 107, 107);
+}
+._1item .layer2 ul li a:hover{
+    background-color: rgb(175, 175, 175);
+    color: white;
+}

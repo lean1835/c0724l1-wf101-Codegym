@@ -1,0 +1,81 @@
+._13dong {
+    width: 1000px;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 7px;
+margin: auto;
+}
+._13dong ._1cot   {
+width: 77px;
+height: 100px;
+margin-right: 20px;
+margin-top: 20px;
+text-align: center;
+font-size: 12px;
+}
+._13dong ._1cot a img{
+    width: 77px;
+    height: 77px;
+    border-radius: 4px;
+    
+}
+._13dong ._1cot a.ten {
+    text-decoration: none;
+    font-family: segoe ui;
+    color: rgb(21, 78, 183);
+}
+
+._13dong ._1cot a img:hover{
+border: 3px solid red;
+}
+
+div.khoitren {
+    width: 900px;
+    margin-left: 50px;
+}
+div.khoitren ul {
+    list-style: none;
+    display: flex;
+    width: 800px;
+}
+.khoitren ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: segoe ui;
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    background-color: rgb(189, 188, 188);
+    margin-right: 5px;
+    padding: 7px 17px;
+
+}
+div.khoiduoi a {
+    display: flex;
+    text-decoration: none;
+    font-size:13px;
+    font-family: segoe ui ;
+width: 200px;
+height: 40px;
+
+}
+div.khoiduoi img{
+    width: 20px;
+    margin-left: 50px;
+    height: 20px;
+    margin-right: 4px;
+    padding-bottom: 5px;
+
+}
+.khoitren ul .amnhac a{
+    background-color: rgb(21, 118, 216);
+}
+div.khoiduoi {
+    display: flex;
+    width: 900px;
+    flex-wrap: wrap;
+}
+.duoi a.khoinho .phai {
+    width: 180px;
+
+}

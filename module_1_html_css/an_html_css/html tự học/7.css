@@ -1,0 +1,32 @@
+h2 {
+width: 700px;
+margin-left:430px;
+font-family: segoe ui ;
+font-size: 30px;
+}
+h4 {
+width: 400px;
+margin-left: 500px;
+margin-top: 60px;
+font-family: segoe ui;
+}
+ul {
+margin-left: 480px;
+font-family: segoe ui;
+color: gray;
+font-size: 12px;
+width: 400px ;
+}
+hr { 
+width: 400px;
+margin-left: 500px;
+}
+p {
+width: 400px;
+margin-left: 500px;
+
+}
+img {
+margin-left:500px;
+width: 400px;
+}

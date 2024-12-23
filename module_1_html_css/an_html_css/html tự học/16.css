@@ -1,0 +1,33 @@
+.to {
+ background-color: #17a2b8;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menungang {
+
+    width: 900px;
+    height: 35px;
+    list-style: none;
+margin-right: auto;
+margin-left: auto;
+text-align: center; 
+
+
+}
+ul.menungang li {
+    display: inline;
+}
+.menungang a {
+    text-decoration: none;
+    font-size: 13px;
+    font-family: segoe ui;
+    padding: 6px;
+    color: white;
+text-transform: uppercase;
+display: inline-block;
+transition: 0.5s;
+}
+.menungang a:hover {
+    background-color: #0c6b79;
+
+} 

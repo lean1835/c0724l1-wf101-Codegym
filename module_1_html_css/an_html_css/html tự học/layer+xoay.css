@@ -1,0 +1,32 @@
+.to{
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+.to .trong{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: 5s;
+
+    border-radius: 100%;
+}
+.to:hover .trong{
+    transform: rotate(3600deg);
+
+}
+.to .ngoai{
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    position: absolute;
+    left: 45px;
+    top: 105px;
+    opacity: 0;
+    transition: 2s;
+}
+.to:hover .ngoai{
+    opacity: 1;
+}

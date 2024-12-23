@@ -1,0 +1,20 @@
+div.to {
+    display: flex;
+    width: 896px;
+    height: 205px;
+    border-bottom: 1px solid gray;
+ margin-bottom: 20px;
+ padding-bottom:  10px;
+}
+div.trai {
+    width: 300px;
+    margin-right: 14px;
+  
+}
+div.phai {
+    width: 582px;
+
+}
+img {
+width: 100%;
+}

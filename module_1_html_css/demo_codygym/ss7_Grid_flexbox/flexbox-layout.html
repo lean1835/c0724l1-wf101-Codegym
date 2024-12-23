@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #cccccc;
+            width: 100%;
+            height: 70%;
+            border: 1px solid lightblue;
+        }
+
+        .flex-item {
+            background-color: lemonchiffon;
+            border: 1px solid lightblue;
+        }
+
+        .item-left {
+            flex :1
+        }
+
+        .item-main {
+            flex :3
+        }
+
+        .item-right {
+            flex :1
+        }
+
+        .nav {
+            background-color: lemonchiffon;
+            width: 100%;
+            height: 10%;
+            border: 1px solid lightblue;
+        }
+
+        .footer {
+            background-color: lemonchiffon;
+            width: 100%;
+            height: 20%;
+            border: 1px solid lightblue;
+        }
+
+        .flex-container-left-main {
+          flex: 4;
+            display: flex;
+        }
+
+        @media screen and (max-width: 500px) {
+            .flex-container,.flex-container-left-main  {
+                flex-direction: column;
+            }
+
+        }
+        @media screen and (min-width: 501px) and (max-width: 700px) {
+            .flex-container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="nav">Nav</div>
+<div class="flex-container">
+    <div class="flex-container-left-main">
+        <div class="flex-item item-left">left</div>
+        <div class="flex-item item-main">main</div>
+    </div>
+    <div class="flex-item item-right">right</div>
+</div>
+<div class="footer">Footer</div>
+</body>
+</html>

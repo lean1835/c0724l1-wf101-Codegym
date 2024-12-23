@@ -1,0 +1,67 @@
+div.taskbar{
+    display: flex;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+}
+div.taskbar img{
+  margin-left: 7%;
+  max-height: 50px;
+  margin-top: 10px;
+}
+ul{
+    margin-left: 30%;
+}
+ul li{
+    display: inline-block;
+    padding: 12px 14px;
+}
+
+ul li:hover{
+    color: rgb(247,114,100);
+}
+div.bo{
+    display: flex;
+    width: 90%;
+    height: 500px;
+    margin-left: 20px;
+}
+div.trai{
+    width: 25%;
+    height: 100%;
+    background-color: rgb(250,100,84);
+}
+div.trai i{
+    font-size: 35px;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 55%;
+    margin-left: 4%;
+    display: block;
+    line-height: 1.3;
+}
+div.trai b{
+   color: white;
+   margin-left: 3%;
+   display: block;
+}
+div.phai{
+    width: 900px;
+    height: 100%;
+   
+}
+input{
+    padding: 11px 23px;
+    margin-left: 5%;
+    color: rgb(250,100,84);
+    font-size: 10px;
+    font-weight:900;
+    background-color: white;
+    border: none;
+}
+input:hover{
+    color: rgb(0, 187, 250);
+}

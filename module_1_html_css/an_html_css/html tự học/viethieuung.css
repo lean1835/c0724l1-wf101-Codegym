@@ -1,0 +1,76 @@
+.product{
+    font-family: seogoe ui light;
+    color: #414114;
+    font-size: 17px;
+    width: 500px;
+    height: 730px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.product .anh1{width: 100%;
+}
+.product .anh2{
+    width: 100%;
+   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.7s;
+    opacity: 0;
+}
+.product:hover .anh2{
+   
+    opacity: 1;
+}
+
+.product .layer3{
+width: 100%;
+display: flex;
+margin-top: 13px;
+}
+.product .layer3 .trai{
+    width: 50%;
+    
+}
+.product .layer3 .trai a{
+ text-decoration: none;
+ color: black;
+ text-transform: uppercase;
+    
+}
+.product .layer3 .phai{
+    width: 50%;
+    text-align: right;
+}
+.product .layer4{
+ position: absolute;
+ left: 0px;
+ bottom: 1px;
+
+}
+
+.product:hover .layer4{
+    
+    opacity: 0;
+   
+}
+.product .layer5{ 
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+    opacity: 0;
+    display: block;
+
+}
+.product:hover .layer5{ 
+
+    opacity: 1;
+    
+}
+.noidung{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1560px;
+    justify-content: space-between;
+    
+}

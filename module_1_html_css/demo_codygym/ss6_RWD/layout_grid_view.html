@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .content{
+            height: 100%;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-lg-1 {width: 8.33%;}
+        .col-lg-2 {width: 16.66%;}
+        .col-lg-3 {width: 25%;}
+        .col-lg-4 {width: 33.33%;}
+        .col-lg-5 {width: 41.66%;}
+        .col-lg-6 {width: 50%;}
+        .col-lg-7 {width: 58.33%;}
+        .col-lg-8 {width: 66.66%;}
+        .col-lg-9 {width: 75%;}
+        .col-lg-10 {width: 83.33%;}
+        .col-lg-11 {width: 91.66%;}
+        .col-lg-12 {width: 100%;}
+        @media screen and (max-width: 500px) {
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+        @media screen and (min-width: 501px) and (max-width: 700px){
+            .col-md-1 {width: 8.33%;}
+            .col-md-2 {width: 16.66%;}
+            .col-md-3 {width: 25%;}
+            .col-md-4 {width: 33.33%;}
+            .col-md-5 {width: 41.66%;}
+            .col-md-6 {width: 50%;}
+            .col-md-7 {width: 58.33%;}
+            .col-md-8 {width: 66.66%;}
+            .col-md-9 {width: 75%;}
+            .col-md-10 {width: 83.33%;}
+            .col-md-11 {width: 91.66%;}
+            .col-md-12 {width: 100%;}
+        }
+
+
+        .nav{
+            min-height: 10%;
+            min-width: 100%;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .content-main{
+            background-color: #cccccc;
+            /*min-height: 70%;*/
+        }
+        .left{
+            min-height: auto;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+        }
+        .main{
+            min-height: auto;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+        }
+        .right{
+            min-height: auto;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+
+        }
+        .footer{
+            min-height: 20%;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .group-list{
+          list-style: none;
+            display: flex;
+        }
+        .group-list li{
+            margin-left: 2%;
+        }
+        .drop-list{
+
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+   <div class="row nav">
+       <ul class="group-list">
+           <li>Link1</li>
+           <li>Link1</li>
+           <li>Link1</li>
+       </ul>
+       <ul class="group-list">
+           <li>Link2</li>
+           <li>Link2</li>
+           <li>Link2</li>
+       </ul>
+   </div>
+   <div class="row">
+       <div class="  left">left</div>
+       <div class="col-lg-7 col-md-9 col-12 main">
+           <div class="row">
+               <div class="col-lg-4 col-md-6 col-12">
+                   <img src="hinh1.jpg" width="100%"/></div>
+               <div class="col-lg-8 col-md-6 col-12">
+                   <h2>Title</h2>
+               </div>
+           </div>
+           <div class="row">
+               <p>Nội dung</p>
+           </div>
+       </div>
+       <div class="col-lg-3 col-md-12 col-12 right">right</div>
+   </div>
+   <div class="row footer">footer</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+/* login  */
+.login{
+    width: 80%;
+    height: 750px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+}
+.login header{
+    padding: 18px 14px;
+    color: black;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+.login .id {
+    padding: 14px 50px;
+    border: 2px solid black;
+
+}
+.login .passwd {    
+    padding: 14px 50px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.login p {
+    margin-top: 5px;
+    line-height: 1.8;
+    /* font-weight: 50; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* home page */
+.home_page{
+    width: 80%;
+    height: 750px;
+    margin: auto;
+    border: 2px solid black;
+}
+.home_page header{
+    height: 20%;
+    border-bottom: 2px;
+    display: flex;
+    
+}
+.home_page header .logo{
+    width: 30%;
+    border-right: 2px solid black;
+    text-align: center;
+    font-weight: 600;
+    font-size: 27px;
+    padding: 50px;
+}
+.home_page header .banner{
+    width: 70%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 27px;
+    padding: 50px;
+}
+.home_page nav{
+    height: 10%;
+    /* border: 2px solid black; */
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.home_page nav .left_nav{
+    width: 25%;
+    border-right:2px solid black ;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+.home_page nav .home{
+    width: 45%;
+    border-right: 2px solid black;
+    padding: 25px;
+    font-size: 20px;
+}
+.home_page nav .product{
+    width: 55%;
+    padding: 25px;
+    font-size: 20px;
+}
+.home_page nav .order{
+    width: 15%;
+    border-left: 2px solid black;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+}
+.home_page .main{
+    display: flex;
+    height: 70%;
+}
+.home_page .main .left{
+    width: 20%;
+    border-right:2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: 550;
+    font-size: 20px;
+    text-align: center;
+    padding: 80px;
+}
+.home_page .main .right{
+    width: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: 550;
+    font-size: 20px;
+    text-align: center;
+    padding: 100px;
+}
+
+/* trang admin */
+.admin{
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    border: 2px solid black;
+    display: flex;
+}
+.admin .left_ad{
+    width: 20%;
+    border-right: 2px solid black ;
+
+}
+.admin .left_ad p{
+    width: 50%;
+    padding: 14px;
+    border: 2px solid black;
+    margin: auto;
+}
+.admin .left_ad p:first-child{
+   margin-top: 70px;
+   border-bottom: none;
+}
+.admin .right_ad{
+    width: 80%;
+}
+.admin .right_ad header{
+    height: 10%;
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding: 30px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.admin .right_ad .list{
+    margin: 148px 0px 18px 167px;
+    padding: 30px;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

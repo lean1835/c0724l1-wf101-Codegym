@@ -1,0 +1,55 @@
+.banner {
+    width: 1115px;
+    margin: auto;
+    display: flex;
+    height: 490px;
+}
+.banner ._1c{
+    width: 218px;
+    display: flex;
+    display: block;
+}
+.banner ._1c .mobat a {
+    text-decoration: none;
+}
+.banner ._1c img.trai {
+    width: 30px;
+    height: 30px;
+}
+.banner ._2c{
+    width: 525px;
+}
+
+.banner ._2c .tren {
+    height: 330px ;
+}
+.banner ._2c .duoi {
+    height: 160px;
+    display: flex;
+   margin-top: 10px;
+}
+.banner ._2c .duoi .motnua {
+    width: 50%;
+}
+.banner ._3c{
+    width: 372px;
+  
+}
+img {
+    width: 100%;
+}
+#s1 .carousel-indicators{
+    display: none;
+}
+.banner ._3c div.phai {
+    display: flex;
+    flex-wrap: wrap;
+}
+.banner ._3c div.phai img.trai {
+    width: 186px;
+    height: 186px;
+}
+.banner ._3c div.phai img.phai {
+    width: 186px;
+    height: 186px;
+}

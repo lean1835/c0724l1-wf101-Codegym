@@ -1,0 +1,27 @@
+.bo{
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+.bo .lop1{
+    width: 600px;
+    height: 600px;
+}
+.bo .lop2{
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.5s;
+    opacity: 0;
+
+}
+.bo:hover .lop2{
+    opacity: 0.4;
+
+}
+// combo chia layer:
+// div bố position relative
+//div con muốn phủ lên : position absolute và top:? px , left:? px

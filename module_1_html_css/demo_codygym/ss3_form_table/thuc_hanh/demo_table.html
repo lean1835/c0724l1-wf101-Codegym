@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>STT</th>
+            <th>Tháng</th>
+            <th>Doanh thu</th>
+            <th>ghi chú</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Tháng 1</td>
+            <td>10 triệu</td>
+            <td rowspan="2">ghi chú</td>
+<!--            gộp hàng 1 cho hàng 2 vào làm 1-->
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tháng 2</td>
+            <td>120 triệu</td>
+<!--            rowspan trên lấy hàng của tr này -->
+        </tr>
+        <tr>
+            <td colspan="2">Tổng tiền</td>  <!--gộp cột 1(stt) vào cột 2 trong dấu =(cột tháng)-->
+            <td>130 triệu</td>
+            <td>aiđo</td>
+        </tr>
+<!--        lưu ý khi gộp cột hoặc hàng nào thì xóa cột và hàng đó đi để tránh trùng-->
+    </table>
+</body>
+</html>

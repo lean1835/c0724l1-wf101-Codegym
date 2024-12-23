@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+ .khoi{
+  
+    margin-left: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.305);
+    width: 23%;
+    float: left;
+}
+
+ .thuvien{
+    border: 1px solid rgba(128, 128, 128, 0.305);
+}
+
+
+.thuvien img{
+    width: 100%;
+    height: auto;
+}
+p{
+    text-align: center;
+    padding: 15px;
+}
+/* xét trước độ  rộng của body bằng px là sai khi căn bằng phần trăm */
+@media screen and (min-width: 901px) and (max-width: 1199px) {
+     .khoi{
+        width: 48%;
+    }
+    
+}
+@media screen and (max-width:899px) {
+     .khoi{
+        width: 100%;
+    }
+    
+}

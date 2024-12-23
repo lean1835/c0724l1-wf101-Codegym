@@ -1,0 +1,39 @@
+body,html {
+     margin 0;
+    height: 100%;} 
+/* khicác phần tử con nằm trong div bố vẫn cách 1 khoảng trắng dù đã cho margin =0
+=> do thẻ body và cho body margin 0 */
+/* và xét body và html với height là 100% để đủ full màn hình  */
+.menu{
+    background-image: url(https://img2.thuthuatphanmem.vn/uploads/2018/12/30/video-background-dep_110344690.jpg);
+    height: 100%; 
+    /* => chiều cao của html và body */
+    background-size: cover;
+}
+.menu ul{
+    list-style: none;
+    font-family: segoe ui light;
+    font-size: 13px;
+    margin: 0;
+    /* phần cách lề trên màu vàng là margin do thẻ ul */
+}
+.menu ul li{
+    padding-bottom: 5px;
+    transition: 0.5s;
+    color: white;
+}
+.menu ul li .icon{
+    display: inline;
+    color: rgb(42, 129, 228);
+    opacity: 0;
+}
+.menu ul li .chu{
+    display: inline;
+} /*  dùng 2 inline của 2 div con để k phải chia cột flex */
+.menu ul li .icon:hover{
+
+    opacity: 1;
+}
+.menu ul li:hover{
+    margin-left: 20px;
+}   

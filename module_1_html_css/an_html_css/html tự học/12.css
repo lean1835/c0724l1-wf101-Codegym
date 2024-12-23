@@ -1,0 +1,30 @@
+.to {
+    display: flex;
+    width: 900px;
+    margin:auto;
+    justify-content: space-between;
+}
+.to .so1{
+    width: 30%;
+}
+.to .so2{
+    width: 40%;
+    display: flex;
+  
+}
+.to .so2 .so2-1{
+width:33%;
+}
+.to .so2 .so2-2{
+width: 33%;
+}
+.to .so2 .so2-3{
+width: 33%;
+}
+.to .so3{
+    width: 15%;
+;
+}
+img{
+    width: 100%;
+}

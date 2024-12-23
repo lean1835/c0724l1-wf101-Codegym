@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <h2>Market Research Survey</h2>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <hr>
+        <h4 style="display: inline;">What is your age range?</h4> <br>
+        <select name="age" id="1">
+            <option value="tre">18-24</option>
+            <option value="trung nien">24-37</option>
+            <option value="gia">37-53</option>
+        </select><br><br>
+        <h4 style="display: inline;">What is your yearly income range?</h4> <br>
+        <select name="money" id="2">
+            <option value="it">0$-25,000$</option>
+            <option value="vua">25,000$-75,000$</option>
+            <option value="nhieu">75,000$-150,000$</option>
+        </select><br><br>
+        <h4 style="display: inline;">Gender</h4> <br>
+        <input type="radio" id="gender" name="gender"> Male <br>
+        <input type="radio" id="gender" name="gender"> Famale <br> <br>
+        <div class="product">
+            <h4 style="display: inline;">Which of the following products have your purchased in the last 2 months. Please check all that apply.</h4> <br>
+            <input type="checkbox" name="pro" id="">Product 1 <br>
+            <input type="checkbox" name="pro" id="">Product 2 <br>
+            <input type="checkbox" name="pro" id="">Product 3 <br>
+        </div> <br>
+        <h4 style="display: inline;">How often would you use our new product?</h4> <br>
+        <input type="radio" id="often" name="often"> Daily <br>
+        <input type="radio" id="often" name="often"> Weekly <br>
+        <input type="radio" id="often" name="often"> Monthly <br> <br>
+        <div class="money">
+            <b>$</b>
+            <input type="text" placeholder="Dollars" size="10">
+            <span>.</span>
+            <input type="text" placeholder="Cents" size="1">
+        </div> <br> 
+        <h4 style="display: inline;">What features would you like to see in the new product.</h4> <br>
+        <textarea name="an" id="02" rows="5" cols="70"></textarea>
+        <br> <br>
+        <span>Please rate your level of agreement with the following statements.</span>
+        <table border="1" style="border-collapse: collapse;">
+            <tr style="background-color: rgb(230,230,230);">
+                <th></th>
+                <th style="padding: 7px;">Strongly Disagree</th>
+                <th style="padding: 7px;">Disagree</th>
+                <th style="padding: 7px;">Agree</th>
+                <th style="padding: 7px;">Strongly Agree</th>
+            </tr>
+            <tr>
+                <th>Our products are priced fairly.</th>
+                <td style="text-align: center;"><input type="radio" name="1"><br>1</td>
+                <td style="text-align: center;"><input type="radio" name="1"><br>2</td>
+                <td style="text-align: center;"><input type="radio" name="1"><br>3</td>
+                <td style="text-align: center;"><input type="radio" name="1"><br>4</td>
+            </tr>
+            <tr style="background-color: rgb(245,245,245);">
+                <th>Our products are high quality.</th>
+                <td style="text-align: center;"><input type="radio" name="2"><br>1</td>
+                <td style="text-align: center;"><input type="radio" name="2"><br>2</td>
+                <td style="text-align: center;"><input type="radio" name="2"><br>3</td>
+                <td style="text-align: center;"><input type="radio" name="2"><br>4</td>
+            </tr>
+            <tr>
+                <th>You would recommend our product to a friend or coworker</th>
+                <td style="text-align: center;"><input type="radio" name="3"><br>1</td>
+                <td style="text-align: center;"><input type="radio" name="3"><br>2</td>
+                <td style="text-align: center;"><input type="radio" name="3"><br>3</td>
+                <td style="text-align: center;"><input type="radio" name="3"><br>4</td>
+            </tr>
+                
+        </table> <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.khung {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    background-image: url(https://th.bing.com/th/id/OIP.lqWosAiq-QbZcncihuD5rAHaEK?rs=1&pid=ImgDetMain);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+//display: flex; 
+//justify-content: center;
+   //combo(1) text-align center decangiua          combo(2)-displayflex+justify-contencenter;decangiua;combo(3)display-flex+justifycontent center+ align-item center thi chinh giua anh ;
+
+    font-size: 33px;
+    color: white;
+}
+.khung .noidung {}

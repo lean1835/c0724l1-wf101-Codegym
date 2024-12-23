@@ -1,0 +1,23 @@
+.chu {
+    position: relative;
+    text-decoration: none;
+
+}
+.chu span {
+color: black;
+}
+.chu div {
+width: 0%;
+height: 2px;
+position: absolute;
+bottom: 0px;
+left: 0px;
+opacity: 0;
+background-color: yellow;
+transition: 0.5s;
+}
+.chu:hover div {
+
+width: 100%;
+opacity: 1;
+}

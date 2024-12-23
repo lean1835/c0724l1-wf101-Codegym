@@ -1,0 +1,30 @@
+div.cottrai {
+    font-family: seoge ui light;
+    font-size: 13px;
+    width: 600px;
+    margin-left: 340px;
+    margin-top: 160px   ;
+}
+.cottrai img{
+    width: 100%;
+}
+a.anhvatd {
+    text-decoration: none;
+    color: gray;
+    font-size: 20px;
+}
+a.anhvatd h3{
+    margin: 0px;
+    padding: 0px;
+}
+a.anhvatd:hover{
+    color: rgb(9, 113, 113);
+}
+a.nguon,a.lq {
+    text-decoration: none;
+
+}
+span.gio {
+    padding-right: 10px;
+padding-left: 10px;
+}

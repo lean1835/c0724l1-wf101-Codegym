@@ -1,0 +1,15 @@
+.vd1{
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    transition: 1.4s;
+    /* Rút ra */
+}
+.vd1:hover{
+    background-color: aquamarine;
+    transition: 0.2s; 
+    /* Đi vào */
+
+}
+/* => hoạt ảnh di chuột vào là 0.2s và rút chuột ra là 1.4s
+vào nhanh ra chậm  */

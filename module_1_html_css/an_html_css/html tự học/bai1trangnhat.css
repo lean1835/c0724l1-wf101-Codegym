@@ -1,0 +1,46 @@
+
+
+.tren {}
+.tren ul{
+    display: flex;
+    list-style: none;
+}
+.tren ul li {}
+.tren ul li a {
+    text-decoration: none;
+    font-family: segoe ui;
+        color: rgba(249, 255, 252, 0.652);
+        background-color: gray;
+        padding: 7px 17px;
+        display: block;
+       margin-right: 2px;
+
+}
+.tren ul li a.xanh{
+    background-color: rgb(19, 91, 172);
+    color: white;
+}
+.duoi {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+.duoi a.khoinho{
+    display: flex;
+    width: 200px;
+    height: 30px;
+    color: #414141;
+    font-family: segoe ui;
+    font-size: 13px;
+    text-decoration: none;
+}
+.duoi a.khoinho img.trai{
+    width: 16px;
+    height: 16px ;
+    margin-right: 5px;
+}
+.duoi a.khoinho div.phai{
+    width: 170px;
+
+}
