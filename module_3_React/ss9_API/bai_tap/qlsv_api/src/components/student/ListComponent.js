@@ -7,16 +7,33 @@ import AddComponent from "./AddComponent";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { toast } from "react-toastify";
+import  "bootstrap/dist/js/bootstrap.min";
+import { getAllClass } from "../../service/classService";
+
 const ListComponent =(nameSearch)=>{
+    //class list---------------
+ const [classList,setClassList]=useState([]);
+    useEffect(()=>{
+                const fetchData= async()=>{
+                    const listClass= await getAllClass();
+                    setClassList(listClass);
+                }
+                fetchData();
+                console.log(classList)
+            },[])
+    //class list-----------
     const [listStudents,setListStudent]=useState([]);
     const [isReload,setIsReload]=useState(false);
     const [nameDelete,SetNameDelete]=useState({id:"",name:"",phone:"", email:""})
     const [show, setShow] = useState(false);
     const searchRef = useRef();
+    const searchClassRef=useRef();
     const handleSearch =()=>{
         let nameSearch = searchRef.current.value;
+        let classSearch = searchClassRef.current.value;
         const fetchData = async ()=>{
-            const searchList = await searchByNamme(nameSearch);
+            const searchList = await searchByNamme(nameSearch,classSearch);
             setListStudent(searchList);
         }
         fetchData();
@@ -50,13 +67,23 @@ const ListComponent =(nameSearch)=>{
         deleteStudentById(nameDelete.id);
         handleClose();
         handleReload();
+        toast("xóa thành côngnpm s")
         console.log(getAllStudent());
     }
     //-------------
 
     return(
         <>  <input ref={searchRef} name={'searchName'} placeholder={'Enter search name'}/>
-            <button onClick={handleSearch} className={'btn btn-warning btn-sm'} type={'button'} >Search</button>
+            <select ref={searchClassRef}>
+                <option value={''}>---------chọn----------</option>
+                        {classList.map((c,i) => (
+                                <option key={i} value={c.id}>{c.name}</option>
+                        ))}
+            </select>   
+            <button onClick={handleSearch} className={'btn btn-primary btn-sm'} type={'button'} >Search</button>
+              
+                
+                
             <table className={'table table-dark'}>
                 <thead>
                 <tr>

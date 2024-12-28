@@ -19,6 +19,7 @@ function AddComponent(){
             }
             
             fetchData();
+            console.log(classList)
         },[])
     const navigate=useNavigate();
     const handleSubmit=(value)=>{
@@ -31,7 +32,7 @@ function AddComponent(){
             addNewStudent(student);
         
        
-        toast("okla")
+        toast("them thanh cong")
         navigate('/list');
     }
     //check dinh dang

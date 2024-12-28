@@ -44,8 +44,6 @@ const table=
       </tr>
     ))}
   </tbody>
-
-
 </table> 
 const result=
 <div>

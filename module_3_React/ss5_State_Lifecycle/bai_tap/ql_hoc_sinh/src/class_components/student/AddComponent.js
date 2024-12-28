@@ -6,6 +6,7 @@ class AddComponent extends React.Component{
         super(props);
         this.state ={
             student :{
+                id:"",
                 name: "",
                 phone:"",
                 email:""
@@ -18,7 +19,7 @@ class AddComponent extends React.Component{
         console.log("-----save---------")
         // goi api thêm mới
         addNewStudent(this.state.student);
-        this.props.handleAddSuccess();
+        this.props.handleReload();
 
     }
     handleOnChange(event){
@@ -40,6 +41,10 @@ class AddComponent extends React.Component{
             <>
                 <h2>Add Students</h2>
                 <form>
+                    ID:
+                    <input name={'id'} onChange={(event)=>{
+                        this.handleOnChange(event)
+                    }}/>
                     Name:
                     <input name={'name'} onChange={(event)=>{
                         this.handleOnChange(event)

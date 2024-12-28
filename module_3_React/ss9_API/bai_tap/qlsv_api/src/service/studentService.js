@@ -56,9 +56,13 @@ export async function deleteStudentById(id){
   }
 }
 
-export async function searchByNamme(nameSearch){
+export async function searchByNamme(nameSearch,classSearch){
+  let url=`http://localhost:8080/Students?name_like=${nameSearch}&class.id=${classSearch}&_sort=name&_order=asc`;
+  if(classSearch==''){
+    url=`http://localhost:8080/Students?name_like=${nameSearch}&_sort=name&_order=asc`
+  }
     try {
-        const  response = await axios.get(`http://localhost:8080/Students?name_like=${nameSearch}&_sort=name&_order=asc`);
+        const  response = await axios.get(url);
         return response.data;
     }catch (e) {
         console.log("lỗi "+e);

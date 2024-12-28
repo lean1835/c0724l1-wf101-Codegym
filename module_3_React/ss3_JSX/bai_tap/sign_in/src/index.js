@@ -19,7 +19,6 @@ const content=
             className="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse"   
- 
             data-bs-target="#navbarToggleExternalContent" 
             aria-controls="navbarToggleExternalContent" 
             aria-expanded="false" 
@@ -62,6 +61,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   result
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

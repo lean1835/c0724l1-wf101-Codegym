@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "name": "an2",
+      "phone": "2234568",
+      "email": "sderuyt@dsakfn"
+    },
+    {
+      "id": 3,
+      "name": "an13",
+      "phone": "999048",
+      "email": "fdj!@dsakfn"
+    },
+    {
+      "id": 1,
+      "name": "ankaka",
+      "phone": "023490",
+      "email": " anle@"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "ka1",
+      "snap:": "hjsdr213",
+      "kata": "2334hfd"
+    },
+    {
+      "id": 2,
+      "name": "ka2",
+      "snap:": "nbnvdr213",
+      "kata": "74hfd"
+    },
+    {
+      "id": 3,
+      "name": "ka14",
+      "snap:": "asdr213",
+      "kata": "2fds4hfd"
+    }
+  ]
+}

@@ -11,9 +11,16 @@ class ListComponent extends React.Component {
         this.state = {
             listStudents: [],
             isShowModal: false,
-            isAddSuccess: false,
+            isReload: false,
+            deleteStudent: {
+                id:"",
+                name:"",
+                phone:"",
+                email: ""
+            }
         }
         this.handleShowModal = this.handleShowModal.bind(this);
+        this.handleReload = this.handleReload.bind(this);
     }
     // sau khi render lần đầu tiên thì hàm sẽ chạy để lấy dữ liệu
     componentDidMount() {
@@ -26,7 +33,9 @@ class ListComponent extends React.Component {
     }
     // sau khi thêm mới thành công thì cần kiểm tra state thay đổi => lấy dữ liệu ở dưới lên và render lại
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevState.isAddSuccess !== this.state.isAddSuccess) {
+        
+        if (prevState.isReload !== this.state.isReload) {
+            console.log("did update")
             this.setState((preState) => ({
                 ...preState,
                 listStudents: [...getAllStudent()]
@@ -34,20 +43,24 @@ class ListComponent extends React.Component {
         }
     }
    // hàm cập nhật state để component render lại
-    handleAddSuccess() {
-        this.setState((pre) => ({
-            ...pre,
-            isAddSuccess: true,
-        }))
-    }
+   handleReload() {
+    this.setState((pre) => ({
+        ...pre,
+        isReload: !pre.isReload,
+    }))
+}
+
 
     // đóng mở modal
 
-    handleShowModal() {
+    handleShowModal(e) {
         this.setState((preState) => (
             {
                 ...preState,
-                isShowModal: !preState.isShowModal
+                isShowModal: !preState.isShowModal,
+                deleteStudent:{
+                    ...e
+                }
             }
         ))
     }
@@ -55,7 +68,7 @@ class ListComponent extends React.Component {
     render() {
         return (
             <>
-                <AddComponent handleAddSuccess={this.handleAddSuccess.bind(this)}/>
+                <AddComponent handleReload={this.handleReload.bind(this)}/>
 
                 <table className={'table table-dark'}>
                     <thead>
@@ -73,14 +86,16 @@ class ListComponent extends React.Component {
                             <td>{e.phone}</td>
                             <td>{e.email}</td>
                             <td>
-                                <button onClick={this.handleShowModal} className={'btn btn-sm btn-danger'}>Delete
+                                <button onClick={()=>{
+                                    this.handleShowModal(e);
+                                }} className={'btn btn-sm btn-danger'}>Delete
                                 </button>
                             </td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
-                <DeleteComponent handleShowModal={this.handleShowModal} isShowModal={this.state.isShowModal}/>
+                <DeleteComponent handleReload = {this.handleReload} deleteStudent ={this.state.deleteStudent} handleShowModal={this.handleShowModal} isShowModal={this.state.isShowModal}/>
             </>
         )
     }
