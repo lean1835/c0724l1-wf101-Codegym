@@ -1,77 +1,168 @@
 {
-    "service":[
-        {
-            "id":1,
-            "name":"Villa A",
-            "acreage": 500,
-            "cost": 2000,
-            "maxPeople": 10,
-            "rentalType": "Tuần",
-            "type":{
-                "id":1,
-                "name":"Villa",
-                "img": "https://nhabephoanggia.vn/contents/images/mau-villa-dep-3.jpg"
-            },
-            "standard": "5 sao",
-            "amenities": [
-                "Hồ bơi riêng",
-                "sân vườn"
-            ],
-            "acreagePool": 50,
-            "floors": 3
-        },
-        {
-            "id":2,
-            "name":"House B",
-            "acreage": 200,
-            "cost": 1000,
-            "maxPeople": 5,
-            "rentalType": "Tháng",
-            "type":{
-                "id":2,
-                "name":"House",
-                "img": "https://th.bing.com/th/id/R.57e7aa7b0ed34819607323aaccbb726a?rik=ybOtgY9DFooeaQ&pid=ImgRaw&r=0"
-            },
-            "standard": "3 sao",
-            "amenities": [
-                "bãi cỏ"
-            ],
-             "floors": 2
-        },
-        {
-            "id":3,
-            "name":"Room c",
-            "acreage": 100,
-            "cost": 500,
-            "maxPeople": 2,
-            "rentalType": "Năm",
-            "type":{
-                "id":3,
-                "name":"Room",
-                "img": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/17/1081975/Nha-Tro.jpg"
-            },
-            "free":[
-                "wifi",
-                "nước"
-            ]
-        }
-        
-    ],
-    "type":[
-        {
-            "id":1,
-            "name":"Villa",
-            "img": "https://nhabephoanggia.vn/contents/images/mau-villa-dep-3.jpg"
-        },
-        {
-            "id":2,
-            "name":"Home",
-            "img": "https://th.bing.com/th/id/R.57e7aa7b0ed34819607323aaccbb726a?rik=ybOtgY9DFooeaQ&pid=ImgRaw&r=0"
-        },
-        {
+  "service":[
+      {
+          "id":1,
+          "name":"Villa A",
+          "acreage": 500,
+          "cost": 2000,
+          "maxPeople": 10,
+          "rentalType": "Tuần",
+          "type":{
+              "id":1,
+              "name":"Villa",
+              "img": "https://nhabephoanggia.vn/contents/images/mau-villa-dep-3.jpg"
+          },
+          "standard": "5 sao",
+          "amenities": [
+              "Hồ bơi riêng",
+              "sân vườn"
+          ],
+          "acreagePool": 50,
+          "floors": 3
+      },
+      {
+          "id":2,
+          "name":"House B",
+          "acreage": 200,
+          "cost": 1000,
+          "maxPeople": 5,
+          "rentalType": "Tháng",
+          "type":{
+              "id":2,
+              "name":"House",
+              "img": "https://th.bing.com/th/id/R.57e7aa7b0ed34819607323aaccbb726a?rik=ybOtgY9DFooeaQ&pid=ImgRaw&r=0"
+          },
+          "standard": "3 sao",
+          "amenities": [
+              "bãi cỏ"
+          ],
+           "floors": 2
+      },
+      {
+          "id":3,
+          "name":"X room",
+          "acreage": 100,
+          "cost": 500,
+          "maxPeople": 2,
+          "rentalType": "Năm",
+          "type":{
+              "id":3,
+              "name":"Room",
+              "img": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/17/1081975/Nha-Tro.jpg"
+          },
+          "free":[
+              "wifi",
+              "nước"
+          ]
+      },
+      {
+        "id":4,
+        "name":"Trọ",
+        "acreage": 50,
+        "cost": 200,
+        "maxPeople": 1,
+        "rentalType": "Tháng",
+        "type":{
             "id":3,
             "name":"Room",
             "img": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/17/1081975/Nha-Tro.jpg"
-        }
-    ]
+        },
+        "free":[
+            "wifi"
+        ]
+    },
+    {
+      "id":5,
+      "name":"Nhà cấp 4",
+      "acreage": 200,
+      "cost": 7000,
+      "maxPeople": 4,
+      "rentalType": "Năm",
+      "type":{
+          "id":2,
+          "name":"House",
+          "img": "https://th.bing.com/th/id/R.57e7aa7b0ed34819607323aaccbb726a?rik=ybOtgY9DFooeaQ&pid=ImgRaw&r=0"
+      },
+      "standard": "1 sao",
+      "amenities": [
+          "sân vườn"
+      ],
+       "floors": 1
+  },
+  {
+    "id":6,
+    "name":"Biệt thự top1",
+    "acreage": 5000,
+    "cost": 200000,
+    "maxPeople": 20,
+    "rentalType": "Năm",
+    "type":{
+        "id":1,
+        "name":"Villa",
+        "img": "https://nhabephoanggia.vn/contents/images/mau-villa-dep-3.jpg"
+    },
+    "standard": "5 sao",
+    "amenities": [
+        "Hồ bơi riêng",
+        "sân vườn",
+        "Phòng gym"
+    ],
+    "acreagePool": 50,
+    "floors": 3
+},
+{
+  "id":7,
+  "name":"An house",
+  "acreage": 1000,
+  "cost": 5000,
+  "maxPeople": 10,
+  "rentalType": "Năm",
+  "type":{
+          "id":2,
+          "name":"House",
+          "img": "https://th.bing.com/th/id/R.57e7aa7b0ed34819607323aaccbb726a?rik=ybOtgY9DFooeaQ&pid=ImgRaw&r=0"
+      },
+      "standard": "1 sao",
+      "amenities": [
+          "sân vườn"
+      ],
+       "floors": 2
+},
+{
+  "id":8,
+  "name":"Phòng bình dân",
+  "acreage": 70,
+  "cost": 300,
+  "maxPeople": 2,
+  "rentalType": "Tuần",
+  "type":{
+      "id":3,
+      "name":"Room",
+      "img": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/17/1081975/Nha-Tro.jpg"
+  },
+  "free":[
+      "wifi",
+      "nước"
+  ]
+}
+
+      
+  ],
+  "type":[
+      {
+          "id":1,
+          "name":"Villa",
+          "img": "https://nhabephoanggia.vn/contents/images/mau-villa-dep-3.jpg"
+      },
+      {
+          "id":2,
+          "name":"Home",
+          "img": "https://th.bing.com/th/id/R.57e7aa7b0ed34819607323aaccbb726a?rik=ybOtgY9DFooeaQ&pid=ImgRaw&r=0"
+      },
+      {
+          "id":3,
+          "name":"Room",
+          "img": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/17/1081975/Nha-Tro.jpg"
+      }
+  ]
 }

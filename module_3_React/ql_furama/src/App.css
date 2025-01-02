@@ -93,3 +93,49 @@ ul{
   display: flex;
 
 }
+.huhcat{
+  background-image: url("https://th.bing.com/th/id/OIP.jRmqUQgvB06CDiLOb7bYFwHaEK?rs=1&pid=ImgDetMain");
+  width: 100%;
+  height: 10000px;
+  color: white;
+  font-size: 200px;
+  text-align: center;
+  position: relative;
+  
+}
+.huhcat i{
+  
+}
+.huh_chu{
+  position: absolute;
+  top: 223px;
+  left: 300px;
+  transition: 2s;
+  color: rgb(233, 44, 44);
+  
+}
+.huh_chu:hover{
+  color: rgb(58, 212, 38);
+  transition: 1s;
+  transform: rotate(360deg);
+}
+
+.nav-end{
+  justify-content: end;
+  margin-left: 100px;
+}
+.nav-menu{
+  background-image: url("https://hanoispiritofplace.com/wp-content/uploads/2018/03/hinh-anh-bien-dep-29.jpg");
+  background-size: cover; 
+  
+}
+.button-menu{
+  color: white;
+  padding: 7px; 
+  display: block;
+  font-size: 20px;
+}
+.button-menu:hover{
+ 
+  color: #61dafb;
+}

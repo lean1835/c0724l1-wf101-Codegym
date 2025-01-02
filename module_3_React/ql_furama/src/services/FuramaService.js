@@ -33,3 +33,11 @@ export async  function searchByNameAndType(nameSearch,typeSearch) {
         return [];
     }
 }
+export async function deleteServiceById(id){
+    try {
+        const response=await axios.delete("http://localhost:8080/service/"+id);
+
+    } catch (e) {
+        console.log("Lỗi:"+e)
+    }
+}

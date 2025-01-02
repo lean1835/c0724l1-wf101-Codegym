@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom'
 function HeaderComponent(){
     return(
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/home">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary nav-menu">
+      <div className="container-fluid button-menu">
+        <Link style={{ color:'white',fontSize:'30px',fontWeight:'bold' }} className="navbar-brand " to="/home">
           Furama
         </Link>
         <button
@@ -22,36 +22,37 @@ function HeaderComponent(){
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-                <Link className="nav-link" to="/list">List SV</Link>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-end">
+            <li className="nav-item button-menu">
+                <Link style={{color:'white' }} className="nav-link" to="/list">List Service</Link>
             </li>
             
-            <li className="nav-item">
-              <a className="nav-link active" href="#">
+            <li  className="nav-item button-menu">
+              <a style={{color:'white' }} className="nav-link active" href="#">
                 About us
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+            <li className="nav-item button-menu">
+              <a style={{color:'white' }} className="nav-link" href="#">
                 Login
               </a>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown button-menu">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                style={{color:'white' }}
               >
                 Công cụ ADMIN
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/list/add">
                     Thêm mới
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a className="dropdown-item disable" href="#">

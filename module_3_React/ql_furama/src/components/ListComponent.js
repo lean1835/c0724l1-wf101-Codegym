@@ -1,12 +1,12 @@
 import React, {useEffect, useRef, useState} from "react";
-import { getAllService, searchByNameAndType } from "../services/FuramaService";
+import { deleteServiceById, getAllService, searchByNameAndType } from "../services/FuramaService";
 import {Link} from 'react-router-dom'
 import { getAllType } from "../services/TypeService";
-
+import Form from 'react-bootstrap/Form';
 // import {deleteProductById, getAllProduct, searchProductByName} from "../services/productService";
-
-// import Modal from "react-bootstrap/Modal";
-// import Button from "react-bootstrap/Button";
+import { ToastContainer, toast } from 'react-toastify';
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 // import {useSelector} from "react-redux";
 // import {getAllManufacture} from "../services/manufactureService";
 // import PaginationComponent from "./PaginationComponent";
@@ -16,6 +16,11 @@ function ListComponent (){
     const nameSearchRef=useRef();
     const typeSearchRef=useRef();
     const [typeList,setTypeList]=useState([]);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     const handleReload=()=>{
         setIsReload((prevState)=>!prevState)
     }
@@ -39,6 +44,14 @@ function ListComponent (){
     const handleSearch=()=>{
         setIsReload((pre)=>!pre);
     }
+
+    const handleDelete=(e)=>{
+        console.log("-----------")
+        deleteServiceById(e.id);
+        setIsReload((prevState)=>!prevState);
+        setShow(false);
+        toast.error("xóa thành công");
+    }
     return(
         <>
         <div className="facilities">FACILITIES</div>
@@ -56,10 +69,10 @@ function ListComponent (){
                 </form>
         </div>
         
-        <ul>
+        <ul  style={{textAlign:'center' }}>
             {service.map((e,i)=>(
                 <li>
-                    <div className="card vien" style={{ width: "18rem", height:"400px" }}>
+                    <div className="card vien" style={{ width: "20rem", height:"400px"}}>
                         <img className="card-img-top" style={{width:"100%", height:"40%"}} src={e.type.img} />
                         <div className="card-body">
                             <h3 className="card-title">{e.name}</h3>
@@ -81,10 +94,27 @@ function ListComponent (){
                             <a href="#" className="btn btn-info">
                             Edit
                             </a>
-                            <a href="#" className="btn btn-danger delete">
-                            Delete
-                            </a>
+                            <Button className="btn btn-danger delete" onClick={handleShow}>
+                                    Delete
+                            </Button>
                             
+                            <Modal show={show} onHide={handleClose} animation={false}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Modal delete</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Bạn có muốn xóa {e.name}</Modal.Body>
+                                <Modal.Footer>
+                                <Button variant="secondary" onClick={handleClose}>
+                                    Hủy
+                                </Button>
+                                
+                                <Button variant="danger" onClick={()=>{
+                                    handleDelete(e);
+                                }}>
+                                    Đồng ý
+                                </Button>
+                                </Modal.Footer>
+                            </Modal>
                         </div>
                     </div>
                 </li>

@@ -1,6 +1,8 @@
 import React from "react";
 function HomeComponent(){
     return(
+        <>
+        <h1 className='huhcat'><i className='huh_chu'>Case Study</i></h1>
         <div >
                 Hello world
                 <div className="card vien" style={{ width: "18rem" }}>
@@ -16,6 +18,8 @@ function HomeComponent(){
                 </div>
             </div>
         </div>
+        </>
+        
     );
 }
 export default HomeComponent;
