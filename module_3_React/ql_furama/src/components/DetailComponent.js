@@ -20,7 +20,7 @@ const DetailComponent= ()=>{
         <h1>Chi tiết dịch vụ:</h1>
         
        
-                        <img className="card-img-top" style={{width:"500px", height:"40%"}} src={oneService.type.img} />
+                        <img className="card-img-top" style={{width:"500px", height:"40%"}} src={oneService.img} />
                             <h3 className="card-title">Tên: {oneService.name}</h3>
                             <p className="card-text">
                               Giá:  {oneService.cost}$/{oneService.rentalType}

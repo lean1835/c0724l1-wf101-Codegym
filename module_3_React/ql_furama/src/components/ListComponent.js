@@ -50,7 +50,7 @@ function ListComponent (){
         deleteServiceById(e.id);
         setIsReload((prevState)=>!prevState);
         setShow(false);
-        toast.error("xóa thành công");
+        toast.success("xóa thành công");
     }
     return(
         <>
@@ -73,7 +73,7 @@ function ListComponent (){
             {service.map((e,i)=>(
                 <li>
                     <div className="card vien" style={{ width: "20rem", height:"400px"}}>
-                        <img className="card-img-top" style={{width:"100%", height:"40%"}} src={e.type.img} />
+                        <img className="card-img-top" style={{width:"100%", height:"40%"}} src={e.img} />
                         <div className="card-body">
                             <h3 className="card-title">{e.name}</h3>
                             <p className="card-text">
@@ -91,14 +91,14 @@ function ListComponent (){
                             </Link> 
                             </p>
                             
-                            <a href="#" className="btn btn-info">
-                            Edit
-                            </a>
-                            <Button className="btn btn-danger delete" onClick={handleShow}>
+                            <Link className="btn btn-warning" to={"/list/edit/"+e.id}>
+                                Edit
+                            </Link>
+                            <button className="btn btn-danger delete" onClick={handleShow}>
                                     Delete
-                            </Button>
+                            </button>
                             
-                            <Modal show={show} onHide={handleClose} animation={false}>
+                            <Modal show={show} onHide={handleClose} animation={true}>
                                 <Modal.Header closeButton>
                                     <Modal.Title>Modal delete</Modal.Title>
                                 </Modal.Header>
@@ -120,12 +120,6 @@ function ListComponent (){
                 </li>
             ))}
         </ul>
-        {/* <select ref={searchClassRef}>
-                <option value={''}>---------chọn----------</option>
-                        {classList.map((c,i) => (
-                                <option key={i} value={c.id}>{c.name}</option>
-                        ))}
-            </select> */}
         </>
     );
 }

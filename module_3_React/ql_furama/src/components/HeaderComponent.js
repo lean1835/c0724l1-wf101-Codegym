@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 import {Link} from 'react-router-dom'
+
 function HeaderComponent(){
     return(
         <>
@@ -64,7 +65,9 @@ function HeaderComponent(){
           </ul> 
         </div>
       </div>
-    </nav></>
+    </nav>
+
+    </>
     );
 }
 export default HeaderComponent;

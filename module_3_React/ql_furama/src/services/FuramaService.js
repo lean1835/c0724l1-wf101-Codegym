@@ -2,7 +2,7 @@ import axios from "axios";
 let url =`http://localhost:8080/service`
 export async function getAllService(){
     try {
-        const response=await axios.get("http://localhost:8080/service");
+        const response=await axios.get(url);
         return response.data;
     } catch (e) {
         console.log("Lỗi:"+e)
@@ -11,7 +11,7 @@ export async function getAllService(){
 
 export async function getServiceById(id){
     try {
-        const response=await axios.get("http://localhost:8080/service/"+id);
+        const response=await axios.get(`${url}/`+id);
         return response.data;
         console.log(response)
     } catch (e) {
@@ -35,9 +35,26 @@ export async  function searchByNameAndType(nameSearch,typeSearch) {
 }
 export async function deleteServiceById(id){
     try {
-        const response=await axios.delete("http://localhost:8080/service/"+id);
+        const response=await axios.delete(`${url}/`+id);
 
     } catch (e) {
         console.log("Lỗi:"+e)
+    }
+}
+export async function addNewService(service) {
+    try {
+        const  response = await axios.post(url,service);
+    }catch (e) {
+        console.log("lỗi "+e);
+    }
+
+}
+export async function updateService(id,service) {
+
+    try {
+        const  response = await axios.put(`${url}/`+id,service);
+        console.log("---------service-update-------------")
+    }catch (e) {
+        console.log("lỗi "+e);
     }
 }

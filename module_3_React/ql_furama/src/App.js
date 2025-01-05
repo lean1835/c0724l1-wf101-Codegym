@@ -5,6 +5,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ListComponent from './components/ListComponent';
 import HomeComponent from './components/HomeComponent';
 import DetailComponent from './components/DetailComponent';
+import EditComponent from './components/EditComponent'
 import { ToastContainer, toast } from 'react-toastify';
 import AddComponent from './components/AddComponent';
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Route path='/home' element={<HomeComponent/>}></Route>
       <Route path='/list/add' element={<AddComponent/>}></Route>
       <Route path={'/list/detail/:id'} element={<DetailComponent/>}></Route>
+      <Route path={'/list/edit/:id'} element={<EditComponent/>}></Route>
 
       </Routes>
       
