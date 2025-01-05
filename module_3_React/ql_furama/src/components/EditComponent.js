@@ -61,7 +61,7 @@ function EditComponent(){
         }
     return(
                 <>
-                    <h1>--Thêm dịch vụ--</h1>
+                    <h1>--Cập nhật dịch vụ--</h1>
                     
                     <Formik initialValues={service} onSubmit={handleSubmit} validationSchema={handleValidate} >
                         <Form>
