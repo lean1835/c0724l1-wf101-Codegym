@@ -20,13 +20,13 @@ const DetailComponent= ()=>{
     }
     return(
         <>
-        <div>
-        <h1>Chi tiết sản phẩm:</h1>
+        <div className="detailProduct">
+        <p>Chi tiết sản phẩm:</p> <hr/>
         <h3>Tên sản phẩm: {oneProduct.title}</h3>
-        <p>Mô tả: {oneProduct.description}</p>
-        <p>Giá: {oneProduct.price}</p>
+        <div>Mô tả: {oneProduct.description}</div>
+        <div>Giá: {oneProduct.price}</div><button className="btn btn-secondary" onClick={handleOut}>Hủy</button>
         </div>
-        <button className="btn btn-primary" onClick={handleOut}>Hủy</button>
+        
         </>
     );
 }
