@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: rgb(241,241,241);
+    height: 9000px;
+
+}
+.main .head{
+    background-color: rgb(34,34,34);
+    display: flex;
+    justify-content: space-between;
+}
+.main .head ul{
+    display: flex;
+    list-style: none;
+    
+ 
+}
+.main .head ul li{
+   padding: 18px 12px ;
+   color: rgb(118,123,129);
+   
+}
+.main .head ul li:hover{
+   background-color: black;
+   color: white;
+   
+}
+.main .head .log{
+    display: flex;
+   margin-top: 9px;
+   margin-right: 10px;
+   color: rgb(118,123,129);
+   padding: 7px 12px;
+}
+.main .head .log:hover{
+   color: white;
+}
+.main .head .log p{
+   margin-left: 3px;
+}
+
+.main .noidung{    
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    flex-wrap: wrap;
+}
+.main .noidung .left{    
+    width: 15%;
+    
+    margin-top: 15px;
+    text-align: center;
+    float: left;
+    
+}
+.main .noidung .left a{  
+    display: block;   
+    padding: 8px 0px;
+    text-decoration: none;
+    color: blue;
+}
+.main .noidung .content{    
+    background-color: white;
+    width: 65%; 
+    padding: 13px 14px;
+
+    float: left;
+}
+.main .noidung .content h2{    
+    font-size: 40px;
+    line-height: 1.8;
+}
+.main .noidung .content p{    
+    font-size: 20px;
+    font-weight: 450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main .noidung .right{    
+    width:15%;  
+    text-align: center;
+
+    margin: 20px 20px 0px;
+    float: left;
+}
+.main .noidung .right a{  
+    display: block;  
+    padding: 35px 0px;
+    border: 1px solid rgba(128, 128, 128, 0.304);
+    text-decoration: none;
+    color: black;
+    
+    
+}
+
+.main .footer{
+    width: 100%;
+    position: fixed;
+    bottom: 9px;
+    color: white;
+    background-color: rgb(85,85,85);
+    
+
+   
+}
+.main .footer a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    /* nhan khoi */
+    display: block; 
+    padding: 25px 0px;
+}
+/* phải khai báo hết thẻ cha mới có tác dụng -displayflex+flex-wrap*/
+@media screen and (max-width: 1200px) {
+
+    .main .noidung .left{
+        width: 30%;
+    }
+    .main .noidung .right{
+        width: 100%;
+    }
+    .main .noidung .content{
+        width: 70%;
+    }
+} 
+@media screen and (max-width: 750px) {
+
+    .main .noidung .left{
+        width: 100%;
+    }
+    .main .noidung .right{
+        width: 100%;
+    }
+    .main .noidung .content{
+        width: 100%;
+    }
+} 
+
+

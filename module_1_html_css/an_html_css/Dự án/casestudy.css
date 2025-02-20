@@ -4,7 +4,7 @@
 .so_1{
     background-image: url(pasted_image_0-removebg.png);
     height: 750px;
-    
+    background-size: cover;
 }
 
 .so_1 header{
@@ -36,6 +36,7 @@ li.menu ul li{
 }
 li.menu:hover a {
     color: black;
+
 }
 li.menu ul li:hover{
     background-color: bisque;

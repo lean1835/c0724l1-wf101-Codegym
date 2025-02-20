@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+}
+div.banner{
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: rgb(245,245,245);
+    border-top: 2px solid rgba(128, 128, 128, 0.392);
+    width: 76%;
+}
+ h4{
+    display: inline;
+}
+a{
+    display: block; 
+    text-decoration: none;
+    color: black;
+}
+a h4,span,p{
+    width: 340px;
+}
+div.content{
+    width: 70%px;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+div.trai{
+    background-color:rgb(248,248,255);
+    width: 350px;
+}
+div.content .phai{
+    width: 50%;
+    margin-left: 30px;
+}
+p.noidung{
+    width: 100%;
+    display: block;
+}
+div.bang{
+    padding: 13px 14px;
+    text-align: center;
+    background-color:rgb(245,245,245) ;
+    margin-top: 5px;
+    margin-left: 30px;
+    width: 74%;
+}
+table{
+   margin: auto;
+    
+}
+table th.mucluc {
+    border-right: 1px solid black;
+}
+table th {
+   padding: 0px 20px;
+   font-size: 15px;
+}
